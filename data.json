@@ -1,0 +1,2222 @@
+{
+ "Isolation Valves": {
+  "BSA Isolation Valve": [
+   {
+    "dn": "DN15",
+    "name": "1/2\" DN15 BSA Isolation Valve",
+    "eqv": 1.10894,
+    "sa": 0.07421
+   },
+   {
+    "dn": "DN20",
+    "name": "3/4\" DN20 BSA Isolation Valve",
+    "eqv": 1.07815,
+    "sa": 0.09044
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 BSA Isolation Valve",
+    "eqv": 1.0446,
+    "sa": 0.10961
+   },
+   {
+    "dn": "DN32",
+    "name": "1-1/4\" DN32 BSA Isolation Valve",
+    "eqv": 1.0316,
+    "sa": 0.13677
+   },
+   {
+    "dn": "DN40",
+    "name": "1-1/2\" DN40 BSA Isolation Valve",
+    "eqv": 1.09654,
+    "sa": 0.16639
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" DN50 BSA Isolation Valve",
+    "eqv": 1.13814,
+    "sa": 0.21561
+   },
+   {
+    "dn": "DN65",
+    "name": "2-1/2\" DN65 BSA Isolation Valve",
+    "eqv": 1.26977,
+    "sa": 0.29121
+   },
+   {
+    "dn": "DN80",
+    "name": "3\" DN80 BSA Isolation Valve",
+    "eqv": 1.34559,
+    "sa": 0.37581
+   },
+   {
+    "dn": "DN100",
+    "name": "4\" DN100 BSA Isolation Valve",
+    "eqv": 1.39972,
+    "sa": 0.50261
+   },
+   {
+    "dn": "DN125",
+    "name": "5\" DN125 BSA Isolation Valve",
+    "eqv": 1.53997,
+    "sa": 0.68361
+   },
+   {
+    "dn": "DN150",
+    "name": "6\" DN150 BSA Isolation Valve",
+    "eqv": 1.58261,
+    "sa": 0.83677
+   },
+   {
+    "dn": "DN200",
+    "name": "8\" DN200 BSA Isolation Valve",
+    "eqv": 1.99996,
+    "sa": 1.37661
+   },
+   {
+    "dn": "DN250",
+    "name": "10\" DN250 BSA Isolation Valve",
+    "eqv": 1.85627,
+    "sa": 1.59233
+   }
+  ],
+  "DBB3 SafeBloc": [
+   {
+    "dn": "DN15",
+    "name": "1/2\" DN15 DBB3 SafeBloc",
+    "eqv": 3.84734,
+    "sa": 0.25746
+   },
+   {
+    "dn": "DN20",
+    "name": "3/4\" DN20 DBB3 SafeBloc",
+    "eqv": 3.17946,
+    "sa": 0.26669
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 DBB3 SafeBloc",
+    "eqv": 2.54547,
+    "sa": 0.2671
+   },
+   {
+    "dn": "DN40",
+    "name": "1-1/2\" DN40 DBB3 SafeBloc",
+    "eqv": 2.90745,
+    "sa": 0.44118
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" DN50 DBB3 SafeBloc",
+    "eqv": 2.54908,
+    "sa": 0.4829
+   },
+   {
+    "dn": "DN65",
+    "name": "2-1/2\" DN65 DBB3 SafeBloc",
+    "eqv": 2.4147,
+    "sa": 0.55379
+   },
+   {
+    "dn": "DN80",
+    "name": "3\" DN80 DBB3 SafeBloc",
+    "eqv": 2.49052,
+    "sa": 0.69558
+   },
+   {
+    "dn": "DN100",
+    "name": "4\" DN100 DBB3 SafeBloc",
+    "eqv": 2.84451,
+    "sa": 1.02141
+   }
+  ],
+  "A3S Isolation Valve": [
+   {
+    "dn": "DN15",
+    "name": "1/2\" DN15 A3S Isolation Valve",
+    "eqv": 0.84459,
+    "sa": 0.05652
+   },
+   {
+    "dn": "DN20",
+    "name": "3/4\" DN20 A3S Isolation Valve",
+    "eqv": 0.72717,
+    "sa": 0.061
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 A3S Isolation Valve",
+    "eqv": 0.86915,
+    "sa": 0.0912
+   },
+   {
+    "dn": "DN32",
+    "name": "1-1/4\" DN32 A3S Isolation Valve",
+    "eqv": 0.89078,
+    "sa": 0.1181
+   },
+   {
+    "dn": "DN40",
+    "name": "1-1/2\" DN40 A3S Isolation Valve",
+    "eqv": 1.0887,
+    "sa": 0.1652
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" DN50 A3S Isolation Valve",
+    "eqv": 1.19668,
+    "sa": 0.2267
+   }
+  ],
+  "HV3 Isolation Valve": [
+   {
+    "dn": "DN15",
+    "name": "1/2\" DN15 HV3 Isolation Valve",
+    "eqv": 0.42213,
+    "sa": 0.02825
+   },
+   {
+    "dn": "DN20",
+    "name": "3/4\" DN20 HV3 Isolation Valve",
+    "eqv": 0.42347,
+    "sa": 0.03552
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 HV3 Isolation Valve",
+    "eqv": 0.51082,
+    "sa": 0.0536
+   },
+   {
+    "dn": "DN32",
+    "name": "1-1/4\" DN32 HV3 Isolation Valve",
+    "eqv": 0.41409,
+    "sa": 0.0549
+   },
+   {
+    "dn": "DN40",
+    "name": "1-1/2\" DN40 HV3 Isolation Valve",
+    "eqv": 0.3618,
+    "sa": 0.0549
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" DN50 HV3 Isolation Valve",
+    "eqv": 0.74272,
+    "sa": 0.1407
+   }
+  ],
+  "M10 Ball Valve Screwed": [
+   {
+    "dn": "DN15",
+    "name": "1/2\" DN15 M10Si2 BSP/NPT",
+    "eqv": 0.5433,
+    "sa": 0.03636
+   },
+   {
+    "dn": "DN20",
+    "name": "3/4\" DN20 M10Si2 BSP/NPT",
+    "eqv": 0.60455,
+    "sa": 0.05071
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 M10Si2 BSP/NPT",
+    "eqv": 0.5907,
+    "sa": 0.06198
+   },
+   {
+    "dn": "DN32",
+    "name": "1-1/4\" DN32 M10Si2 BSP/NPT",
+    "eqv": 0.6142,
+    "sa": 0.08143
+   },
+   {
+    "dn": "DN40",
+    "name": "1-1/2\" DN40 M10Si2 BSP/NPT",
+    "eqv": 0.66106,
+    "sa": 0.10031
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" DN50 M10Si2 BSP/NPT",
+    "eqv": 0.73271,
+    "sa": 0.1388
+   },
+   {
+    "dn": "DN65",
+    "name": "2-1/2\" DN65 M10Si2 BSP/NPT",
+    "eqv": 0.65867,
+    "sa": 0.15106
+   }
+  ],
+  "M10 Ball Valve Flanged": [
+   {
+    "dn": "DN15",
+    "name": "1/2\" DN15 M10Si2 PN/ANSI",
+    "eqv": 1.14126,
+    "sa": 0.07637
+   },
+   {
+    "dn": "DN20",
+    "name": "3/4\" DN20 M10Si2 PN/ANSI",
+    "eqv": 1.16358,
+    "sa": 0.0976
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 M10Si2 PN/ANSI",
+    "eqv": 1.12295,
+    "sa": 0.11783
+   },
+   {
+    "dn": "DN32",
+    "name": "1-1/4\" DN32 M10Si2 PN/ANSI",
+    "eqv": 1.08866,
+    "sa": 0.14433
+   },
+   {
+    "dn": "DN40",
+    "name": "1-1/2\" DN40 M10Si2 PN/ANSI",
+    "eqv": 1.13893,
+    "sa": 0.17282
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" DN50 M10Si2 PN/ANSI",
+    "eqv": 1.08072,
+    "sa": 0.20473
+   },
+   {
+    "dn": "DN65",
+    "name": "2-1/2\" DN65 M10Si2 PN/ANSI",
+    "eqv": 1.06628,
+    "sa": 0.24454
+   }
+  ],
+  "M21 Ball Valve": [
+   {
+    "dn": "DN15",
+    "name": "1/2\" DN15 M21Si2",
+    "eqv": 0.99349,
+    "sa": 0.06648
+   },
+   {
+    "dn": "DN20",
+    "name": "3/4\" DN20 M21Si2",
+    "eqv": 0.95759,
+    "sa": 0.08032
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 M21Si2",
+    "eqv": 0.89972,
+    "sa": 0.09441
+   },
+   {
+    "dn": "DN32",
+    "name": "1-1/4\" DN32 M21Si2",
+    "eqv": 0.86398,
+    "sa": 0.11455
+   },
+   {
+    "dn": "DN40",
+    "name": "1-1/2\" DN40 M21Si2",
+    "eqv": 0.91052,
+    "sa": 0.13816
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" DN50 M21Si2",
+    "eqv": 0.8899,
+    "sa": 0.16858
+   },
+   {
+    "dn": "DN65",
+    "name": "2-1/2\" DN65 M21Si2",
+    "eqv": 0.94185,
+    "sa": 0.216
+   },
+   {
+    "dn": "DN80",
+    "name": "3\" DN80 M21Si2",
+    "eqv": 0.95185,
+    "sa": 0.26584
+   },
+   {
+    "dn": "DN100",
+    "name": "4\" DN100 M21Si2",
+    "eqv": 0.93428,
+    "sa": 0.33548
+   }
+  ]
+ },
+ "Reducing Valves": {
+  "DP27 Screwed": [
+   {
+    "dn": "DN15",
+    "name": "1/2\" DN15 DP27 Reducing Valve Screwed",
+    "eqv": 3.64166,
+    "sa": 0.2437
+   },
+   {
+    "dn": "DN20",
+    "name": "3/4\" DN20 DP27 Reducing Valve Screwed",
+    "eqv": 2.9113,
+    "sa": 0.2442
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 DP27 Reducing Valve Screwed",
+    "eqv": 2.62651,
+    "sa": 0.2756
+   }
+  ],
+  "DP27 Flanged": [
+   {
+    "dn": "DN15",
+    "name": "1/2\" DN15 DP27 Reducing Valve Flanged",
+    "eqv": 3.69247,
+    "sa": 0.2471
+   },
+   {
+    "dn": "DN20",
+    "name": "3/4\" DN20 DP27 Reducing Valve Flanged",
+    "eqv": 3.41202,
+    "sa": 0.2862
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 DP27 Reducing Valve Flanged",
+    "eqv": 3.002,
+    "sa": 0.315
+   },
+   {
+    "dn": "DN32",
+    "name": "1-1/4\" DN32 DP27 Reducing Valve Flanged",
+    "eqv": 2.66782,
+    "sa": 0.3537
+   },
+   {
+    "dn": "DN40",
+    "name": "1-1/2\" DN40 DP27 Reducing Valve Flanged",
+    "eqv": 2.88388,
+    "sa": 0.4376
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" DN50 DP27 Reducing Valve Flanged",
+    "eqv": 2.51003,
+    "sa": 0.4755
+   }
+  ],
+  "DP143/163": [
+   {
+    "dn": "DN15",
+    "name": "1/2\" DN15 DP143/163 Reducing Valve Flanged",
+    "eqv": 3.77797,
+    "sa": 0.25282
+   },
+   {
+    "dn": "DN20",
+    "name": "3/4\" DN20 DP143/163 Reducing Valve Flanged",
+    "eqv": 3.21018,
+    "sa": 0.26927
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 DP143/163 Reducing Valve Flanged",
+    "eqv": 3.34972,
+    "sa": 0.35149
+   },
+   {
+    "dn": "DN32",
+    "name": "1-1/4\" DN32 DP143/163 Reducing Valve Flanged",
+    "eqv": 2.83979,
+    "sa": 0.3765
+   },
+   {
+    "dn": "DN40",
+    "name": "1-1/2\" DN40 DP143/163 Reducing Valve Flanged",
+    "eqv": 3.15672,
+    "sa": 0.479
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" DN50 DP143/163 Reducing Valve Flanged",
+    "eqv": 3.04959,
+    "sa": 0.57771
+   },
+   {
+    "dn": "DN80",
+    "name": "3\" DN80 DP143/163 Reducing Valve Flanged",
+    "eqv": 3.05764,
+    "sa": 0.85397
+   }
+  ],
+  "DRV Reducing Valve": [
+   {
+    "dn": "DN15",
+    "name": "1/2\" DN15 DRV Reducing Valve",
+    "eqv": 1.66402,
+    "sa": 0.11136
+   },
+   {
+    "dn": "DN20",
+    "name": "3/4\" DN20 DRV Reducing Valve",
+    "eqv": 1.67707,
+    "sa": 0.14067
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 DRV Reducing Valve",
+    "eqv": 1.6186,
+    "sa": 0.16984
+   },
+   {
+    "dn": "DN32",
+    "name": "1-1/4\" DN32 DRV Reducing Valve",
+    "eqv": 1.587,
+    "sa": 0.2104
+   },
+   {
+    "dn": "DN40",
+    "name": "1-1/2\" DN40 DRV Reducing Valve",
+    "eqv": 1.69006,
+    "sa": 0.25645
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" DN50 DRV Reducing Valve",
+    "eqv": 1.65369,
+    "sa": 0.31327
+   },
+   {
+    "dn": "DN65",
+    "name": "2-1/2\" DN65 DRV Reducing Valve",
+    "eqv": 1.73287,
+    "sa": 0.39742
+   },
+   {
+    "dn": "DN80",
+    "name": "3\" DN80 DRV Reducing Valve",
+    "eqv": 1.71906,
+    "sa": 0.48012
+   },
+   {
+    "dn": "DN100",
+    "name": "4\" DN100 DRV Reducing Valve",
+    "eqv": 1.63911,
+    "sa": 0.58857
+   }
+  ],
+  "BRV2 Reducing Valve": [
+   {
+    "dn": "DN15",
+    "name": "1/2\" DN15 BRV2 Reducing Valve",
+    "eqv": 1.60039,
+    "sa": 0.1071
+   },
+   {
+    "dn": "DN20",
+    "name": "3/4\" DN20 BRV2 Reducing Valve",
+    "eqv": 1.33426,
+    "sa": 0.11192
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 BRV2 Reducing Valve",
+    "eqv": 1.1116,
+    "sa": 0.11664
+   }
+  ],
+  "BRV7 Reducing Valve": [
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 BRV7 Reducing Valve",
+    "eqv": 1.4417,
+    "sa": 0.15128
+   },
+   {
+    "dn": "DN32",
+    "name": "1-1/4\" DN32 BRV7 Reducing Valve",
+    "eqv": 1.27742,
+    "sa": 0.16936
+   },
+   {
+    "dn": "DN40",
+    "name": "1-1/2\" DN40 BRV7 Reducing Valve",
+    "eqv": 1.2054,
+    "sa": 0.18291
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" DN50 BRV7 Reducing Valve",
+    "eqv": 1.06117,
+    "sa": 0.20103
+   }
+  ],
+  "NPT 25 Main Valve, CI": [
+   {
+    "dn": "DN15",
+    "name": "1/2\" DN15 NPT 25 Main Valve, CI",
+    "eqv": 1.7139,
+    "sa": 0.11469
+   },
+   {
+    "dn": "DN20",
+    "name": "3/4\" DN20 NPT 25 Main Valve, CI",
+    "eqv": 1.47135,
+    "sa": 0.12342
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 NPT 25 Main Valve, CI",
+    "eqv": 1.40864,
+    "sa": 0.14777
+   },
+   {
+    "dn": "DN32",
+    "name": "1-1/4\" DN32 NPT 25 Main Valve, CI",
+    "eqv": 1.3382,
+    "sa": 0.17742
+   },
+   {
+    "dn": "DN40",
+    "name": "1-1/2\" DN40 NPT 25 Main Valve, CI",
+    "eqv": 1.32962,
+    "sa": 0.20176
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" DN50 NPT 25 Main Valve, CI",
+    "eqv": 1.34906,
+    "sa": 0.25557
+   },
+   {
+    "dn": "DN65",
+    "name": "2-1/2\" DN65 NPT 25 Main Valve, CI",
+    "eqv": 2.12359,
+    "sa": 0.48702
+   },
+   {
+    "dn": "DN80",
+    "name": "3\" DN80 NPT 25 Main Valve, CI",
+    "eqv": 1.96542,
+    "sa": 0.54892
+   },
+   {
+    "dn": "DN100",
+    "name": "4\" DN100 NPT 25 Main Valve, CI",
+    "eqv": 1.85663,
+    "sa": 0.66669
+   },
+   {
+    "dn": "DN150",
+    "name": "6\" DN150 NPT 25 Main Valve, CI",
+    "eqv": 2.03009,
+    "sa": 1.07337
+   }
+  ]
+ },
+ "Control Valves": {
+  "KE Control Valve Screwed": [
+   {
+    "dn": "DN15",
+    "name": "1/2\" DN15 KE 4/6/7 BSP/NPT/SW",
+    "eqv": 1.16091,
+    "sa": 0.07769
+   },
+   {
+    "dn": "DN15",
+    "name": "1/2\" DN15 KE 4/6/7 PN",
+    "eqv": 1.4465,
+    "sa": 0.0968
+   },
+   {
+    "dn": "DN20",
+    "name": "3/4\" DN20 KE 4/6/7 BSP/NPT/SW",
+    "eqv": 1.04009,
+    "sa": 0.08724
+   },
+   {
+    "dn": "DN20",
+    "name": "3/4\" DN20 KE 4/6/7 PN",
+    "eqv": 1.39962,
+    "sa": 0.1174
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 KE 4/6/7 BSP/NPT/SW",
+    "eqv": 0.94292,
+    "sa": 0.09894
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 KE 4/6/7 PN",
+    "eqv": 1.2637,
+    "sa": 0.1326
+   },
+   {
+    "dn": "DN32",
+    "name": "1-1/4\" DN32 KE 4/6/7 BSP/NPT/SW",
+    "eqv": 0.90511,
+    "sa": 0.12
+   },
+   {
+    "dn": "DN32",
+    "name": "1-1/4\" DN32 KE 4/6/7 PN",
+    "eqv": 1.21059,
+    "sa": 0.1605
+   },
+   {
+    "dn": "DN40",
+    "name": "1-1/2\" DN40 KE 4/6/7 BSP/NPT/SW",
+    "eqv": 0.96739,
+    "sa": 0.14679
+   },
+   {
+    "dn": "DN40",
+    "name": "1-1/2\" DN40 KE 4/6/7 PN",
+    "eqv": 1.30618,
+    "sa": 0.1982
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" DN50 KE 4/6/7 BSP/NPT/SW",
+    "eqv": 0.95017,
+    "sa": 0.18
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" DN50 KE 4/6/7 PN",
+    "eqv": 1.21622,
+    "sa": 0.2304
+   },
+   {
+    "dn": "DN65",
+    "name": "2-1/2\" DN65 KE 4/6/7 PN",
+    "eqv": 1.48862,
+    "sa": 0.3414
+   },
+   {
+    "dn": "DN80",
+    "name": "3\" DN80 KE 4/6/7 PN",
+    "eqv": 1.41681,
+    "sa": 0.3957
+   },
+   {
+    "dn": "DN100",
+    "name": "4\" DN100 KE 4/6/7 PN",
+    "eqv": 1.38298,
+    "sa": 0.4966
+   },
+   {
+    "dn": "DN125",
+    "name": "5\" DN125 KE 4/6/7 PN",
+    "eqv": 1.54757,
+    "sa": 0.68698
+   },
+   {
+    "dn": "DN150",
+    "name": "6\" DN150 KE 4/6/7 PN",
+    "eqv": 1.67713,
+    "sa": 0.88675
+   },
+   {
+    "dn": "DN200",
+    "name": "8\" DN200 KE 4/6/7 PN",
+    "eqv": 1.91771,
+    "sa": 1.32
+   }
+  ],
+  "KE Control Valve Flanged": [
+   {
+    "dn": "DN250",
+    "name": "10\" DN250 KE 4 PN",
+    "eqv": 1.9708,
+    "sa": 1.69057
+   },
+   {
+    "dn": "DN300",
+    "name": "12\" DN300 KE 4 PN",
+    "eqv": 1.96549,
+    "sa": 2.0
+   }
+  ]
+ },
+ "Separators": {
+  "S1 Separator": [
+   {
+    "dn": "DN15",
+    "name": "1/2\" DN15 S1 Separator",
+    "eqv": 0.96351,
+    "sa": 0.06448
+   },
+   {
+    "dn": "DN20",
+    "name": "3/4\" DN20 S1 Separator",
+    "eqv": 1.19788,
+    "sa": 0.10048
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 S1 Separator",
+    "eqv": 1.82185,
+    "sa": 0.19117
+   }
+  ],
+  "S2/S12 Separator": [
+   {
+    "dn": "DN32",
+    "name": "1-1/4\" DN32 S12 Separator",
+    "eqv": 1.26281,
+    "sa": 0.16742
+   },
+   {
+    "dn": "DN40",
+    "name": "1-1/2\" DN40 S12 Separator",
+    "eqv": 1.10285,
+    "sa": 0.16735
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" DN50 S12 Separator",
+    "eqv": 1.49307,
+    "sa": 0.28285
+   }
+  ],
+  "S3/13 Separator": [
+   {
+    "dn": "DN40",
+    "name": "1-1/2\" DN40 S13 Separator",
+    "eqv": 1.70009,
+    "sa": 0.25797
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" DN50 S13 Separator",
+    "eqv": 1.9725,
+    "sa": 0.37367
+   },
+   {
+    "dn": "DN65",
+    "name": "2-1/2\" DN65 S13 Separator",
+    "eqv": 1.88933,
+    "sa": 0.4333
+   },
+   {
+    "dn": "DN80",
+    "name": "3\" DN80 S13 Separator",
+    "eqv": 2.01689,
+    "sa": 0.5633
+   },
+   {
+    "dn": "DN100",
+    "name": "4\" DN100 S13 Separator",
+    "eqv": 2.50372,
+    "sa": 0.89904
+   },
+   {
+    "dn": "DN125",
+    "name": "5\" DN125 S13 Separator",
+    "eqv": 3.09549,
+    "sa": 1.37412
+   },
+   {
+    "dn": "DN150",
+    "name": "6\" DN150 S13 Separator",
+    "eqv": 2.73471,
+    "sa": 1.44592
+   },
+   {
+    "dn": "DN200",
+    "name": "8\" DN200 S13 Separator",
+    "eqv": 2.28742,
+    "sa": 1.57448
+   }
+  ],
+  "S4A Separator": [
+   {
+    "dn": "DN25",
+    "name": "1\" NPT S4A",
+    "eqv": 1.41436,
+    "sa": 0.14841
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" NPT S4A",
+    "eqv": 1.52653,
+    "sa": 0.28919
+   },
+   {
+    "dn": "DN80",
+    "name": "3\" FLG S4A",
+    "eqv": 2.42351,
+    "sa": 0.67686
+   },
+   {
+    "dn": "DN100",
+    "name": "4\" FLG S4A",
+    "eqv": 2.43545,
+    "sa": 0.87452
+   },
+   {
+    "dn": "DN150",
+    "name": "6\" FLG S4A",
+    "eqv": 2.46191,
+    "sa": 1.30169
+   }
+  ],
+  "S5/S6 Separator (Screwed)": [
+   {
+    "dn": "DN15",
+    "name": "1/2\" DN15 S5/S6 Separator",
+    "eqv": 2.02593,
+    "sa": 0.13558
+   },
+   {
+    "dn": "DN15",
+    "name": "1/2\" DN15 S5/S6",
+    "eqv": 1.37385,
+    "sa": 0.09194
+   },
+   {
+    "dn": "DN20",
+    "name": "3/4\" DN20 S5/S6 Separator",
+    "eqv": 1.92685,
+    "sa": 0.16162
+   },
+   {
+    "dn": "DN20",
+    "name": "3/4\" DN20 S5/S6",
+    "eqv": 1.37239,
+    "sa": 0.11512
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 S5/S6 Separator",
+    "eqv": 2.24754,
+    "sa": 0.23583
+   },
+   {
+    "dn": "DN32",
+    "name": "1-1/4\" DN32 S5/S6 Separator",
+    "eqv": 2.29784,
+    "sa": 0.30465
+   },
+   {
+    "dn": "DN40",
+    "name": "1-1/2\" DN40 S5/S6 Separator",
+    "eqv": 2.57712,
+    "sa": 0.39105
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" DN50 S5/S6 Separator",
+    "eqv": 2.3194,
+    "sa": 0.43939
+   },
+   {
+    "dn": "DN100",
+    "name": "4\" DN15 S5 Separator*",
+    "eqv": 1.39008,
+    "sa": 0.09302
+   },
+   {
+    "dn": "DN100",
+    "name": "4\" DN20 S5 Separator*",
+    "eqv": 1.28461,
+    "sa": 0.10775
+   },
+   {
+    "dn": "DN100",
+    "name": "4\" DN25 S5 Separator*",
+    "eqv": 1.62102,
+    "sa": 0.17009
+   },
+   {
+    "dn": "DN100",
+    "name": "4\" DN32 S5 Separator*",
+    "eqv": 1.62287,
+    "sa": 0.21516
+   },
+   {
+    "dn": "DN100",
+    "name": "4\" DN40 S5 Separator*",
+    "eqv": 1.91511,
+    "sa": 0.2906
+   },
+   {
+    "dn": "DN100",
+    "name": "4\" DN50 S5 Separator*",
+    "eqv": 1.67734,
+    "sa": 0.31776
+   }
+  ],
+  "S5/S6 Separator (Flanged)": [
+   {
+    "dn": "DN25",
+    "name": "1\" NPT S5",
+    "eqv": 1.48006,
+    "sa": 0.1553
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" NPT S5 + 1xMating Flange",
+    "eqv": 1.85436,
+    "sa": 0.19458
+   },
+   {
+    "dn": "DN32",
+    "name": "1-1/4\" 1.25\" NPT S5",
+    "eqv": 1.48608,
+    "sa": 0.19703
+   },
+   {
+    "dn": "DN32",
+    "name": "1-1/4\" 1.25\" NPT S5 + 1xMating Flange",
+    "eqv": 1.86527,
+    "sa": 0.2473
+   },
+   {
+    "dn": "DN40",
+    "name": "1-1/2\" 1.5\" NPT S5",
+    "eqv": 1.75472,
+    "sa": 0.26626
+   },
+   {
+    "dn": "DN40",
+    "name": "1-1/2\" 1.5\" NPT S5 + 1xMating Flange",
+    "eqv": 2.16885,
+    "sa": 0.3291
+   }
+  ],
+  "S7/S8 Separator": [
+   {
+    "dn": "DN65",
+    "name": "2-1/2\" DN65 S7 Separator",
+    "eqv": 3.39594,
+    "sa": 0.77882
+   },
+   {
+    "dn": "DN80",
+    "name": "3\" DN80 S7 Separator",
+    "eqv": 3.82734,
+    "sa": 1.06894
+   },
+   {
+    "dn": "DN100",
+    "name": "4\" DN100 S7 Separator",
+    "eqv": 3.77365,
+    "sa": 1.35504
+   },
+   {
+    "dn": "DN125",
+    "name": "5\" DN125 S7 Separator",
+    "eqv": 3.72019,
+    "sa": 1.65143
+   },
+   {
+    "dn": "DN150",
+    "name": "6\" DN150 S7 Separator",
+    "eqv": 3.93795,
+    "sa": 2.08211
+   },
+   {
+    "dn": "DN200",
+    "name": "8\" DN200 S7 Separator",
+    "eqv": 4.00536,
+    "sa": 2.75697
+   },
+   {
+    "dn": "DN250",
+    "name": "10\" DN250 S7 Separator",
+    "eqv": 5.42354,
+    "sa": 4.65238
+   }
+  ]
+ },
+ "Strainers": {
+  "Fig 12/14HP Strainer": [
+   {
+    "dn": "DN15",
+    "name": "1/2\" DN15 Fig 12/14HP Strainer",
+    "eqv": 0.25852,
+    "sa": 0.0173
+   },
+   {
+    "dn": "DN20",
+    "name": "3/4\" DN20 Fig 12/14HP Strainer",
+    "eqv": 0.28016,
+    "sa": 0.0235
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 Fig 12/14HP Strainer",
+    "eqv": 0.32212,
+    "sa": 0.0338
+   },
+   {
+    "dn": "DN32",
+    "name": "1-1/4\" DN32 Fig 12/14HP Strainer",
+    "eqv": 0.37336,
+    "sa": 0.0495
+   },
+   {
+    "dn": "DN40",
+    "name": "1-1/2\" DN40 Fig 12/14HP Strainer",
+    "eqv": 0.46922,
+    "sa": 0.0712
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" DN50 Fig 12/14HP Strainer",
+    "eqv": 0.5057,
+    "sa": 0.0958
+   }
+  ],
+  "Fig 34/37 Strainer": [
+   {
+    "dn": "DN15",
+    "name": "1/2\" DN15 Fig 34/37 Strainer",
+    "eqv": 0.77675,
+    "sa": 0.05198
+   },
+   {
+    "dn": "DN20",
+    "name": "3/4\" DN20 Fig 34/37 Strainer",
+    "eqv": 0.73474,
+    "sa": 0.06163
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 Fig 34/37 Strainer",
+    "eqv": 0.70314,
+    "sa": 0.07378
+   },
+   {
+    "dn": "DN32",
+    "name": "1-1/4\" DN32 Fig 34/37 Strainer",
+    "eqv": 0.7038,
+    "sa": 0.09331
+   },
+   {
+    "dn": "DN40",
+    "name": "1-1/2\" DN40 Fig 34/37 Strainer",
+    "eqv": 0.78575,
+    "sa": 0.11923
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" DN50 Fig 34/37 Strainer",
+    "eqv": 0.88893,
+    "sa": 0.1684
+   },
+   {
+    "dn": "DN65",
+    "name": "2-1/2\" DN65 Fig 34/37 Strainer",
+    "eqv": 0.98099,
+    "sa": 0.22498
+   },
+   {
+    "dn": "DN80",
+    "name": "3\" DN80 Fig 34/37 Strainer",
+    "eqv": 1.09717,
+    "sa": 0.30643
+   },
+   {
+    "dn": "DN100",
+    "name": "4\" DN100 Fig 34/37 Strainer",
+    "eqv": 1.2143,
+    "sa": 0.43603
+   },
+   {
+    "dn": "DN125",
+    "name": "5\" DN125 Fig 34/37 Strainer",
+    "eqv": 1.42322,
+    "sa": 0.63178
+   },
+   {
+    "dn": "DN150",
+    "name": "6\" DN150 Fig 34/37 Strainer",
+    "eqv": 1.83081,
+    "sa": 0.968
+   },
+   {
+    "dn": "DN200",
+    "name": "8\" DN200 Fig 34/37 Strainer",
+    "eqv": 2.09791,
+    "sa": 1.44403
+   },
+   {
+    "dn": "DN250",
+    "name": "10\" DN250 Fig 34 Strainer",
+    "eqv": 2.39183,
+    "sa": 2.05174
+   },
+   {
+    "dn": "DN300",
+    "name": "12\" DN300 Fig 34 Strainer",
+    "eqv": 2.48911,
+    "sa": 2.53282
+   },
+   {
+    "dn": "DN350",
+    "name": "14\" DN350 Fig 34 Strainer",
+    "eqv": 2.78843,
+    "sa": 3.30122
+   },
+   {
+    "dn": "DN400",
+    "name": "16\" DN400 Fig 34 Strainer",
+    "eqv": 3.33931,
+    "sa": 4.51676
+   }
+  ],
+  "Fig 34HP Strainer": [
+   {
+    "dn": "DN15",
+    "name": "1/2\" DN15 Fig 34HP Strainer",
+    "eqv": 1.49074,
+    "sa": 0.09976
+   },
+   {
+    "dn": "DN20",
+    "name": "3/4\" DN20 Fig 34HP Strainer",
+    "eqv": 1.59188,
+    "sa": 0.13353
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 Fig 34HP Strainer",
+    "eqv": 1.41008,
+    "sa": 0.14796
+   },
+   {
+    "dn": "DN40",
+    "name": "1-1/2\" DN40 Fig 34HP Strainer",
+    "eqv": 1.50099,
+    "sa": 0.22776
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" DN50 Fig 34HP Strainer",
+    "eqv": 1.40337,
+    "sa": 0.26586
+   },
+   {
+    "dn": "DN65",
+    "name": "2-1/2\" DN65 Fig 34HP Strainer",
+    "eqv": 1.66024,
+    "sa": 0.38076
+   },
+   {
+    "dn": "DN80",
+    "name": "3\" DN80 Fig 34HP Strainer",
+    "eqv": 1.73497,
+    "sa": 0.48456
+   },
+   {
+    "dn": "DN100",
+    "name": "4\" DN100 Fig 34HP Strainer",
+    "eqv": 1.802,
+    "sa": 0.64706
+   },
+   {
+    "dn": "DN150",
+    "name": "6\" DN150 Fig 34HP Strainer",
+    "eqv": 2.05769,
+    "sa": 1.08796
+   },
+   {
+    "dn": "DN200",
+    "name": "8\" DN200 Fig 34HP Strainer",
+    "eqv": 2.37425,
+    "sa": 1.63424
+   }
+  ],
+  "CSF16 Screwed": [
+   {
+    "dn": "DN15",
+    "name": "1/2\" DN15 CSF16 (Screwed)",
+    "eqv": 0.92657,
+    "sa": 0.06201
+   },
+   {
+    "dn": "DN20",
+    "name": "3/4\" DN20 CSF16 (Screwed)",
+    "eqv": 0.94588,
+    "sa": 0.07934
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 CSF16 (Screwed)",
+    "eqv": 0.91546,
+    "sa": 0.09606
+   },
+   {
+    "dn": "DN32",
+    "name": "1-1/4\" DN32 CSF16 (Screwed)",
+    "eqv": 0.89523,
+    "sa": 0.11869
+   },
+   {
+    "dn": "DN40",
+    "name": "1-1/2\" DN40 CSF16 (Screwed)",
+    "eqv": 0.94701,
+    "sa": 0.1437
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" DN50 CSF16 (Screwed)",
+    "eqv": 0.91839,
+    "sa": 0.17398
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" DN50 CSF16L (Screwed)",
+    "eqv": 0.91839,
+    "sa": 0.17398
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" DN50 CSF16H (Screwed)",
+    "eqv": 1.15372,
+    "sa": 0.21856
+   },
+   {
+    "dn": "DN65",
+    "name": "2-1/2\" DN65 CSF16 (Screwed)",
+    "eqv": 0.94986,
+    "sa": 0.21784
+   },
+   {
+    "dn": "DN80",
+    "name": "3\" DN80 CSF16 (Screwed)",
+    "eqv": 0.93188,
+    "sa": 0.26026
+   }
+  ],
+  "CSF16 Flanged": [
+   {
+    "dn": "DN15",
+    "name": "1/2\" DN15 CSF16 (Flanged)",
+    "eqv": 1.19328,
+    "sa": 0.07985
+   },
+   {
+    "dn": "DN20",
+    "name": "3/4\" DN20 CSF16 (Flanged)",
+    "eqv": 1.39294,
+    "sa": 0.11684
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 CSF16 (Flanged)",
+    "eqv": 1.49589,
+    "sa": 0.15696
+   },
+   {
+    "dn": "DN32",
+    "name": "1-1/4\" DN32 CSF16 (Flanged)",
+    "eqv": 1.64119,
+    "sa": 0.21759
+   },
+   {
+    "dn": "DN40",
+    "name": "1-1/2\" DN40 CSF16 (Flanged)",
+    "eqv": 1.9264,
+    "sa": 0.29231
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" DN50 CSF16 (Flanged)",
+    "eqv": 2.07293,
+    "sa": 0.3927
+   },
+   {
+    "dn": "DN65",
+    "name": "2-1/2\" DN65 CSF16 (Flanged)",
+    "eqv": 2.42282,
+    "sa": 0.55565
+   },
+   {
+    "dn": "DN80",
+    "name": "3\" DN80 CSF16 (Flanged)",
+    "eqv": 2.61847,
+    "sa": 0.73131
+   },
+   {
+    "dn": "DN100",
+    "name": "4\" DN100 CSF16 (Flanged)",
+    "eqv": 2.73604,
+    "sa": 0.98246
+   },
+   {
+    "dn": "DN150",
+    "name": "6\" DN150 CSF16 (Flanged)",
+    "eqv": 3.1772,
+    "sa": 1.67988
+   }
+  ]
+ },
+ "Steam Trapping": {
+  "STS17.2 (Single ISO)": [
+   {
+    "dn": "DN15",
+    "name": "1/2\" DN15 STS17.2 (Single Iso)",
+    "eqv": 1.3727,
+    "sa": 0.09186
+   },
+   {
+    "dn": "DN15",
+    "name": "1/2\" DN15 STS17.2 (Single Iso - Flanged)",
+    "eqv": 2.11986,
+    "sa": 0.14186
+   },
+   {
+    "dn": "DN20",
+    "name": "3/4\" DN20 STS17.2 (Single Iso)",
+    "eqv": 1.10114,
+    "sa": 0.09236
+   },
+   {
+    "dn": "DN20",
+    "name": "3/4\" DN20 STS17.2 (Single Iso - Flanged)",
+    "eqv": 1.69723,
+    "sa": 0.14236
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 STS17.2 (Single Iso)",
+    "eqv": 0.98674,
+    "sa": 0.10354
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 STS17.2 (Single Iso - Flanged)",
+    "eqv": 1.47576,
+    "sa": 0.15485
+   }
+  ],
+  "STS17.2 (Double ISO)": [
+   {
+    "dn": "DN15",
+    "name": "1/2\" DN15 STS17.2 (Double Iso)",
+    "eqv": 1.89588,
+    "sa": 0.12687
+   },
+   {
+    "dn": "DN15",
+    "name": "1/2\" DN15 STS17.2 (Double Iso - Flanged)",
+    "eqv": 2.64304,
+    "sa": 0.17687
+   },
+   {
+    "dn": "DN20",
+    "name": "3/4\" DN20 STS17.2 (Double Iso)",
+    "eqv": 1.58116,
+    "sa": 0.13263
+   },
+   {
+    "dn": "DN20",
+    "name": "3/4\" DN20 STS17.2 (Double Iso - Flanged)",
+    "eqv": 2.17725,
+    "sa": 0.18263
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 STS17.2 (Double Iso)",
+    "eqv": 1.31383,
+    "sa": 0.13786
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 STS17.2 (Double Iso - Flanged)",
+    "eqv": 1.8042,
+    "sa": 0.18932
+   }
+  ],
+  "STS17.2 (Double ISO + Bleed)": [
+   {
+    "dn": "DN15",
+    "name": "1/2\" DN15 STS17.2 (Double Iso + Bleed)",
+    "eqv": 2.1403,
+    "sa": 0.14323
+   },
+   {
+    "dn": "DN15",
+    "name": "1/2\" DN15 STS17.2 (Double Iso + Bleed - Flanged)",
+    "eqv": 2.82655,
+    "sa": 0.18915
+   },
+   {
+    "dn": "DN20",
+    "name": "3/4\" DN20 STS17.2 (Double Iso + Bleed)",
+    "eqv": 1.77617,
+    "sa": 0.14898
+   },
+   {
+    "dn": "DN20",
+    "name": "3/4\" DN20 STS17.2 (Double Iso + Bleed - Flanged)",
+    "eqv": 2.32366,
+    "sa": 0.19491
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 STS17.2 (Double Iso + Bleed)",
+    "eqv": 1.46971,
+    "sa": 0.15422
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 STS17.2 (Double Iso + Bleed - Flanged)",
+    "eqv": 1.90738,
+    "sa": 0.20014
+   }
+  ],
+  "UFT32": [
+   {
+    "dn": "UFT32",
+    "name": "UFT32",
+    "eqv": 0.90556,
+    "sa": 0.0606
+   }
+  ],
+  "FTGS14 Screwed": [
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 FTGS14HC BSP/NPT",
+    "eqv": 1.29896,
+    "sa": 0.1363
+   },
+   {
+    "dn": "DN32",
+    "name": "1-1/4\" DN32 FTGS14HC BSP/NPT",
+    "eqv": 1.05747,
+    "sa": 0.1402
+   },
+   {
+    "dn": "DN40",
+    "name": "1-1/2\" DN40 FTGS14 BSP/NPT",
+    "eqv": 1.68841,
+    "sa": 0.2562
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" DN50 FTGS14 BSP/NPT",
+    "eqv": 1.74831,
+    "sa": 0.3312
+   }
+  ],
+  "FT14 Flanged": [
+   {
+    "dn": "DN15",
+    "name": "1/2\" DN15 FT14 BSP/NPT",
+    "eqv": 1.05798,
+    "sa": 0.0708
+   },
+   {
+    "dn": "DN15",
+    "name": "1/2\" DN15 FT14 PN/ANSI",
+    "eqv": 1.80663,
+    "sa": 0.1209
+   },
+   {
+    "dn": "DN20",
+    "name": "3/4\" DN20 FT14 BSP/NPT",
+    "eqv": 0.86433,
+    "sa": 0.0725
+   },
+   {
+    "dn": "DN20",
+    "name": "3/4\" DN20 FT14 PN/ANSI",
+    "eqv": 1.5403,
+    "sa": 0.1292
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 FT14 BSP/NPT",
+    "eqv": 0.85486,
+    "sa": 0.0897
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 FT14 PN/ANSI",
+    "eqv": 1.33899,
+    "sa": 0.1405
+   }
+  ],
+  "FT44/47": [
+   {
+    "dn": "DN15",
+    "name": "1/2\" DN15 FT44/47 PN/ANSI",
+    "eqv": 2.56324,
+    "sa": 0.17153
+   },
+   {
+    "dn": "DN20",
+    "name": "3/4\" DN20 FT44/47 PN/ANSI",
+    "eqv": 2.47061,
+    "sa": 0.20724
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 FT44/47 PN/ANSI",
+    "eqv": 2.27008,
+    "sa": 0.2382
+   },
+   {
+    "dn": "DN40",
+    "name": "1-1/2\" DN40 FT44/47 PN/ANSI",
+    "eqv": 2.62554,
+    "sa": 0.3984
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" DN50 FT44/47 PN/ANSI",
+    "eqv": 2.36909,
+    "sa": 0.4488
+   },
+   {
+    "dn": "DN80",
+    "name": "3\" DN80 FT44/47 PN/ANSI",
+    "eqv": 3.43657,
+    "sa": 0.9598
+   },
+   {
+    "dn": "DN100",
+    "name": "4\" DN100 FT44/47 PN/ANSI",
+    "eqv": 2.8055,
+    "sa": 1.0074
+   }
+  ],
+  "UFT14HC": [
+   {
+    "dn": "UFT14HC",
+    "name": "UFT14HC",
+    "eqv": 0.26914,
+    "sa": 0.09664
+   }
+  ],
+  "FT-15/30/75/125": [
+   {
+    "dn": "DN20",
+    "name": "3/4\" DN20 FT-15",
+    "eqv": 0.77434,
+    "sa": 0.06495
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 FT-15",
+    "eqv": 0.64759,
+    "sa": 0.06795
+   },
+   {
+    "dn": "DN32",
+    "name": "1-1/4\" DN32 FT-15",
+    "eqv": 0.53755,
+    "sa": 0.07127
+   },
+   {
+    "dn": "DN40",
+    "name": "1-1/2\" DN40 FT-15",
+    "eqv": 0.74472,
+    "sa": 0.113
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" DN50 FT-15",
+    "eqv": 0.81593,
+    "sa": 0.15457
+   }
+  ],
+  "NPT FT450": [
+   {
+    "dn": "DN20",
+    "name": "3/4\" DN20 NPT FT450",
+    "eqv": 0.85113,
+    "sa": 0.08931
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 NPT FT450",
+    "eqv": 0.99532,
+    "sa": 0.13196
+   },
+   {
+    "dn": "DN40",
+    "name": "1-1/2\" DN40 NPT FT450",
+    "eqv": 1.32597,
+    "sa": 0.2012
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" DN50 NPT FT450",
+    "eqv": 1.30452,
+    "sa": 0.24713
+   }
+  ],
+  "ANSI FT450": [
+   {
+    "dn": "DN20",
+    "name": "3/4\" DN20 ANSI150 FT450",
+    "eqv": 1.10295,
+    "sa": 0.11573
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 ANSI150 FT450",
+    "eqv": 1.23669,
+    "sa": 0.16396
+   },
+   {
+    "dn": "DN40",
+    "name": "1-1/2\" DN40 ANSI150 FT450",
+    "eqv": 1.9059,
+    "sa": 0.2892
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" DN50 ANSI150 FT450",
+    "eqv": 1.8404,
+    "sa": 0.34864
+   }
+  ],
+  "FTB": [
+   {
+    "dn": "DN40",
+    "name": "1-1/2\" DN40 NPT FTB-200",
+    "eqv": 1.16947,
+    "sa": 0.17746
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" DN50 FTB-20",
+    "eqv": 1.20429,
+    "sa": 0.22814
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" DN50 FTB-30",
+    "eqv": 2.19272,
+    "sa": 0.41539
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" DN50 NPT FTB-175",
+    "eqv": 1.28368,
+    "sa": 0.24318
+   },
+   {
+    "dn": "DN65",
+    "name": "2-1/2\" DN65 NPT FTB-125",
+    "eqv": 1.92325,
+    "sa": 0.44107
+   }
+  ],
+  "FTI": [
+   {
+    "dn": "DN15",
+    "name": "1/2\" DN15 NPT FTI-15",
+    "eqv": 1.1653,
+    "sa": 0.07798
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 NPT FTI-15",
+    "eqv": 0.76839,
+    "sa": 0.08063
+   },
+   {
+    "dn": "DN40",
+    "name": "1-1/2\" DN40 NPT FTI-15",
+    "eqv": 1.62933,
+    "sa": 0.24724
+   }
+  ],
+  "B Series": [
+   {
+    "dn": "DN15",
+    "name": "1/2\" DN15 NPT B1H",
+    "eqv": 0.79207,
+    "sa": 0.05301
+   },
+   {
+    "dn": "DN20",
+    "name": "3/4\" DN20 NPT B1H",
+    "eqv": 0.70064,
+    "sa": 0.05877
+   },
+   {
+    "dn": "DN20",
+    "name": "3/4\" DN20 NPT B2-15",
+    "eqv": 1.027,
+    "sa": 0.08614
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 NPT B3-15",
+    "eqv": 1.08265,
+    "sa": 0.1136
+   },
+   {
+    "dn": "DN32",
+    "name": "1-1/4\" DN32 NPT B4-15",
+    "eqv": 1.37356,
+    "sa": 0.18211
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" DN50 NPT B5-15",
+    "eqv": 1.52999,
+    "sa": 0.28984
+   }
+  ]
+ },
+ "Mechanical Pumps / PPUs": {
+  "MFP14 Pump": [
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 MFP14 Pump",
+    "eqv": 6.53769,
+    "sa": 0.686
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 MFP14 PPU Single",
+    "eqv": 16.76356,
+    "sa": 1.759
+   },
+   {
+    "dn": "DN40",
+    "name": "1-1/2\" DN40 MFP14 Pump",
+    "eqv": 4.87219,
+    "sa": 0.73931
+   },
+   {
+    "dn": "DN40",
+    "name": "1-1/2\" DN40 MFP14 PPU Single",
+    "eqv": 13.35179,
+    "sa": 2.026
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" DN50 MFP14 Pump",
+    "eqv": 4.93877,
+    "sa": 0.9356
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" DN50 MFP14 PPU Single",
+    "eqv": 13.97804,
+    "sa": 2.648
+   },
+   {
+    "dn": "DN80",
+    "name": "3\" DN80 MFP14 Pump",
+    "eqv": 4.11042,
+    "sa": 1.148
+   },
+   {
+    "dn": "DN80",
+    "name": "3\" DN80 MFP14 PPU Single",
+    "eqv": 10.77017,
+    "sa": 3.008
+   }
+  ],
+  "APT10 Pump/Trap": [
+   {
+    "dn": "APT10",
+    "name": "APT10 Pump/Trap",
+    "eqv": 3.55527,
+    "sa": 0.29822
+   },
+   {
+    "dn": "APT10",
+    "name": "APT10 PPU",
+    "eqv": 7.32663,
+    "sa": 2.63084
+   }
+  ],
+  "APT14 Pump/Trap": [
+   {
+    "dn": "APT14",
+    "name": "DN40 APT14 Pump/Trap",
+    "eqv": 3.78732,
+    "sa": 0.57469
+   },
+   {
+    "dn": "APT14",
+    "name": "APT14 PN/ANSI",
+    "eqv": 4.09392,
+    "sa": 0.62121
+   },
+   {
+    "dn": "APT14HC",
+    "name": "DN50 APT14HC Pump/Trap",
+    "eqv": 4.41487,
+    "sa": 0.83635
+   },
+   {
+    "dn": "APT14",
+    "name": "APT14 PPU",
+    "eqv": 8.87068,
+    "sa": 3.18528
+   },
+   {
+    "dn": "APT14HC",
+    "name": "APT14HC PPU",
+    "eqv": 9.46982,
+    "sa": 3.40042
+   }
+  ],
+  "Pump Accessories": [
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 NPT PPEC",
+    "eqv": 5.51892,
+    "sa": 0.5791
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" DN50 x DN50 NPT / ANSI 150 PTC",
+    "eqv": 2.76622,
+    "sa": 0.52403
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" DN50 x DN50 NPT / ANSI 150 PTF",
+    "eqv": 5.72343,
+    "sa": 1.08425
+   },
+   {
+    "dn": "DN80",
+    "name": "3\" DN80 x DN50 PTF-HP",
+    "eqv": 6.03097,
+    "sa": 1.68439
+   },
+   {
+    "dn": "DN100",
+    "name": "4\" DN100 x DN100 PTF4",
+    "eqv": 7.06337,
+    "sa": 2.53631
+   }
+  ]
+ },
+ "Electrical Pumps / CRUs": {
+  "CRU200/500": [
+   {
+    "dn": "CRU200",
+    "name": "CRU200 DN25 Fixed Speed",
+    "eqv": 6.64175,
+    "sa": 2.38492
+   },
+   {
+    "dn": "CRU200",
+    "name": "CRU200 DN40 Fixed Speed",
+    "eqv": 6.64175,
+    "sa": 2.38492
+   },
+   {
+    "dn": "CRU500",
+    "name": "CRU500 DN40 Fixed Speed",
+    "eqv": 12.31026,
+    "sa": 4.42037
+   },
+   {
+    "dn": "CRU500",
+    "name": "CRU500 DN50 Fixed Speed",
+    "eqv": 12.31026,
+    "sa": 4.42037
+   },
+   {
+    "dn": "CRU200",
+    "name": "CRU200 DN25 Variable Speed",
+    "eqv": 6.64175,
+    "sa": 2.38492
+   },
+   {
+    "dn": "CRU200",
+    "name": "CRU200 DN40 Variable Speed",
+    "eqv": 6.64175,
+    "sa": 2.38492
+   },
+   {
+    "dn": "CRU500",
+    "name": "CRU500 DN40 Variable Speed",
+    "eqv": 12.31026,
+    "sa": 4.42037
+   },
+   {
+    "dn": "CRU500",
+    "name": "CRU500 DN50 Variable Speed",
+    "eqv": 12.31026,
+    "sa": 4.42037
+   }
+  ]
+ },
+ "Manifolds": {
+  "MSC Manifold": [
+   {
+    "dn": "DN40",
+    "name": "1-1/2\" MSC04 Manifold",
+    "eqv": 1.50427,
+    "sa": 0.22826
+   },
+   {
+    "dn": "DN40",
+    "name": "1-1/2\" MSC08 Manifold",
+    "eqv": 2.96016,
+    "sa": 0.44917
+   },
+   {
+    "dn": "DN40",
+    "name": "1-1/2\" MSC12 Manifold",
+    "eqv": 4.48066,
+    "sa": 0.6799
+   }
+  ]
+ },
+ "Flash Vessels": {
+  "FV Flash Vessel": [
+   {
+    "dn": "FV6",
+    "name": "FV6 Flash Vessel",
+    "eqv": 2.82193,
+    "sa": 0.53459
+   },
+   {
+    "dn": "FV8",
+    "name": "FV8 Flash Vessel",
+    "eqv": 2.59511,
+    "sa": 0.72479
+   },
+   {
+    "dn": "FV12",
+    "name": "FV12 Flash Vessel",
+    "eqv": 3.09203,
+    "sa": 1.11029
+   },
+   {
+    "dn": "FV15",
+    "name": "FV15 Flash Vessel",
+    "eqv": 3.19096,
+    "sa": 1.68716
+   },
+   {
+    "dn": "FV18",
+    "name": "FV18 Flash Vessel",
+    "eqv": 5.09372,
+    "sa": 2.6932
+   },
+   {
+    "dn": "FV16",
+    "name": "FV16 Flash Vessel",
+    "eqv": 3.19096,
+    "sa": 1.68716
+   }
+  ]
+ },
+ "Mating Flanges": {
+  "Mating Flanges": [
+   {
+    "dn": "DN15",
+    "name": "1/2\" DN15 Mating Flanges",
+    "eqv": 0.35214,
+    "sa": 0.02356
+   },
+   {
+    "dn": "DN20",
+    "name": "3/4\" DN20 Mating Flanges",
+    "eqv": 0.37458,
+    "sa": 0.03142
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 Mating Flanges",
+    "eqv": 0.3743,
+    "sa": 0.03927
+   },
+   {
+    "dn": "DN32",
+    "name": "1-1/4\" DN32 Mating Flanges",
+    "eqv": 0.37918,
+    "sa": 0.05027
+   },
+   {
+    "dn": "DN40",
+    "name": "1-1/2\" DN40 Mating Flanges",
+    "eqv": 0.41413,
+    "sa": 0.06284
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" DN50 Mating Flanges",
+    "eqv": 0.41464,
+    "sa": 0.07855
+   },
+   {
+    "dn": "DN65",
+    "name": "2-1/2\" DN65 Mating Flanges",
+    "eqv": 0.44526,
+    "sa": 0.10211
+   },
+   {
+    "dn": "DN80",
+    "name": "3\" DN80 Mating Flanges",
+    "eqv": 0.45,
+    "sa": 0.12568
+   },
+   {
+    "dn": "DN100",
+    "name": "4\" DN100 Mating Flanges",
+    "eqv": 0.43751,
+    "sa": 0.1571
+   },
+   {
+    "dn": "DN125",
+    "name": "5\" DN125 Mating Flanges",
+    "eqv": 0.4,
+    "sa": 0.17756
+   },
+   {
+    "dn": "DN150",
+    "name": "6\" DN150 Mating Flanges",
+    "eqv": 0.44569,
+    "sa": 0.23565
+   },
+   {
+    "dn": "DN200",
+    "name": "8\" DN200 Mating Flanges",
+    "eqv": 0.4,
+    "sa": 0.27533
+   },
+   {
+    "dn": "DN250",
+    "name": "10\" DN250 Mating Flanges",
+    "eqv": 0.4,
+    "sa": 0.34312
+   },
+   {
+    "dn": "DN300",
+    "name": "12\" DN300 Mating Flanges",
+    "eqv": 0.4,
+    "sa": 0.40702
+   },
+   {
+    "dn": "DN350",
+    "name": "14\" DN350 Mating Flanges",
+    "eqv": 0.37745,
+    "sa": 0.44686
+   },
+   {
+    "dn": "DN400",
+    "name": "16\" DN400 Mating Flanges",
+    "eqv": 0.37757,
+    "sa": 0.5107
+   }
+  ]
+ },
+ "Pipes": {
+  "Pipes": [
+   {
+    "dn": "DN15",
+    "name": "1/2\" DN15 Pipe",
+    "eqv": 0.99994,
+    "sa": 0.06692
+   },
+   {
+    "dn": "DN20",
+    "name": "3/4\" DN20 Pipe",
+    "eqv": 1.00001,
+    "sa": 0.08388
+   },
+   {
+    "dn": "DN25",
+    "name": "1\" DN25 Pipe",
+    "eqv": 0.99999,
+    "sa": 0.10493
+   },
+   {
+    "dn": "DN32",
+    "name": "1-1/4\" DN32 Pipe",
+    "eqv": 0.99996,
+    "sa": 0.13258
+   },
+   {
+    "dn": "DN40",
+    "name": "1-1/2\" DN40 Pipe",
+    "eqv": 0.99999,
+    "sa": 0.15174
+   },
+   {
+    "dn": "DN50",
+    "name": "2\" DN50 Pipe",
+    "eqv": 0.99999,
+    "sa": 0.18944
+   },
+   {
+    "dn": "DN65",
+    "name": "2-1/2\" DN65 Pipe",
+    "eqv": 0.99998,
+    "sa": 0.22934
+   },
+   {
+    "dn": "DN80",
+    "name": "3\" DN80 Pipe",
+    "eqv": 0.99999,
+    "sa": 0.27929
+   },
+   {
+    "dn": "DN100",
+    "name": "4\" DN100 Pipe",
+    "eqv": 1.00001,
+    "sa": 0.35908
+   },
+   {
+    "dn": "DN125",
+    "name": "5\" DN125 Pipe",
+    "eqv": 0.99999,
+    "sa": 0.44391
+   },
+   {
+    "dn": "DN150",
+    "name": "6\" DN150 Pipe",
+    "eqv": 1.0,
+    "sa": 0.52873
+   },
+   {
+    "dn": "DN200",
+    "name": "8\" DN200 Pipe",
+    "eqv": 1.0,
+    "sa": 0.68832
+   },
+   {
+    "dn": "DN250",
+    "name": "10\" DN250 Pipe",
+    "eqv": 1.00019,
+    "sa": 0.85797
+   },
+   {
+    "dn": "DN300",
+    "name": "12\" DN300 Pipe",
+    "eqv": 1.0,
+    "sa": 1.01756
+   },
+   {
+    "dn": "DN350",
+    "name": "14\" DN350 Pipe",
+    "eqv": 0.94362,
+    "sa": 1.11715
+   },
+   {
+    "dn": "DN400",
+    "name": "16\" DN400 Pipe",
+    "eqv": 0.94392,
+    "sa": 1.27674
+   }
+  ]
+ }
+}

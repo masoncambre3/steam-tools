@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Insulation Jacket Savings Calculator</title>
+<meta name="theme-color" content="#0f1117">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0f1117;--surface:#181c27;--surface2:#1e2333;--border:#2a3047;--border-bright:#3d4a6a;
+  --accent:#e8a020;--accent2:#f0c060;--text:#e8eaf0;--text-muted:#7a8299;--text-dim:#4a5270;
+  --green:#3ecf8e;--green-dim:#1a4a38;--red:#e05252;--blue:#4a90d9;--orange:#fb923c;--purple:#a78bfa;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 40% at 20% 0%,rgba(232,160,32,0.05) 0%,transparent 60%),radial-gradient(ellipse 50% 50% at 80% 100%,rgba(74,144,217,0.04) 0%,transparent 60%);pointer-events:none;z-index:0;}
+.container{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:28px 20px 60px;}
+header{margin-bottom:28px;}
+.header-eyebrow{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:8px;}
+h1{font-family:'Bebas Neue',sans-serif;font-size:46px;letter-spacing:0.02em;line-height:0.95;font-weight:400;}
+h1 span{color:var(--accent);}
+.header-sub{font-size:14px;color:var(--text-muted);margin-top:8px;max-width:620px;line-height:1.5;}
+.layout{display:grid;grid-template-columns:1fr 400px;gap:20px;align-items:start;}
+@media(max-width:880px){.layout{grid-template-columns:1fr;}}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px 22px;margin-bottom:20px;}
+.card-title{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:0.05em;color:var(--text);margin-bottom:16px;display:flex;align-items:center;gap:8px;}
+.card-title::before{content:'';width:3px;height:18px;background:var(--accent);border-radius:2px;}
+.section-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-dim);margin:18px 0 10px;}
+.section-label:first-of-type{margin-top:0;}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.input-group{margin-bottom:12px;}
+.input-label{display:flex;align-items:center;gap:6px;margin-bottom:5px;}
+.input-label label{font-size:12px;color:var(--text-muted);}
+.unit-tag{font-family:'DM Mono',monospace;font-size:10px;color:var(--text-dim);margin-left:auto;}
+input,select{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:8px;color:var(--text);font-family:'DM Mono',monospace;font-size:15px;padding:10px 12px;transition:border-color 0.15s;}
+input:focus,select:focus{outline:none;border-color:var(--accent);}
+select{cursor:pointer;font-family:'DM Sans',sans-serif;font-size:14px;}
+.seg{display:flex;background:var(--surface2);border:1px solid var(--border);border-radius:8px;overflow:hidden;}
+.seg button{flex:1;background:none;border:none;color:var(--text-muted);font-family:'DM Sans',sans-serif;font-size:13px;padding:10px;cursor:pointer;transition:all 0.15s;}
+.seg button.active{background:var(--accent);color:#0f1117;font-weight:600;}
+.add-btn{width:100%;background:linear-gradient(135deg,var(--accent),var(--accent2));border:none;border-radius:8px;color:#0f1117;font-family:'DM Sans',sans-serif;font-weight:600;font-size:14px;padding:12px;cursor:pointer;margin-top:6px;transition:transform 0.1s;}
+.add-btn:active{transform:scale(0.98);}
+/* Items list */
+.item{background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:10px;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;}
+.item-name{font-size:13px;font-weight:500;color:var(--text);}
+.item-meta{font-family:'DM Mono',monospace;font-size:11px;color:var(--text-dim);margin-top:3px;}
+.item-save{font-family:'DM Mono',monospace;font-size:11px;color:var(--green);margin-top:5px;}
+.item-rm{background:none;border:none;color:var(--text-dim);cursor:pointer;font-size:18px;line-height:1;padding:2px 4px;transition:color 0.15s;}
+.item-rm:hover{color:var(--red);}
+.empty{text-align:center;color:var(--text-dim);font-size:13px;padding:24px 12px;}
+/* Results panel */
+.results-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;position:sticky;top:20px;}
+.results-header{background:linear-gradient(135deg,rgba(232,160,32,0.15),rgba(232,160,32,0.05));border-bottom:1px solid var(--border);padding:18px 24px;}
+.results-title{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:0.05em;color:var(--accent);}
+.results-subtitle{font-size:11px;color:var(--text-muted);margin-top:2px;}
+.results-body{padding:20px 24px;}
+.metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px;}
+.metric{}
+.metric-label{font-size:11px;color:var(--text-muted);margin-bottom:3px;}
+.metric-value{font-family:'Bebas Neue',sans-serif;font-size:34px;letter-spacing:0.02em;line-height:1;}
+.metric-value.fin{color:var(--green);}
+.metric-sub{font-family:'DM Mono',monospace;font-size:10px;color:var(--text-dim);margin-top:3px;}
+/* Validation box */
+.val-box{background:linear-gradient(135deg,rgba(74,144,217,0.1),rgba(74,144,217,0.03));border:1px solid rgba(74,144,217,0.25);border-radius:10px;padding:14px 16px;margin-top:18px;}
+.val-title{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);margin-bottom:10px;}
+.val-row{display:flex;justify-content:space-between;font-size:12px;padding:3px 0;}
+.val-row .k{color:var(--text-muted);}
+.val-row .v{font-family:'DM Mono',monospace;color:var(--text);}
+.val-note{font-size:11px;color:var(--text-dim);line-height:1.5;margin-top:8px;padding-top:8px;border-top:1px solid var(--border);}
+.val-note b{color:var(--blue);}
+footer{margin-top:40px;border-top:1px solid var(--border);padding-top:18px;font-size:11px;color:var(--text-dim);text-align:center;line-height:1.8;}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <div class="header-eyebrow">Steam System Economics</div>
+  <h1>Insulation Jacket <span>Savings</span> Calculator</h1>
+  <p class="header-sub">Quantify annual energy, carbon, and financial savings from insulating uninsulated steam fittings. Built on the Spirax Sarco heat-loss method.</p>
+</header>
+
+<div class="layout">
+  <!-- LEFT: inputs -->
+  <div>
+    <div class="card">
+      <div class="card-title">System Inputs</div>
+      <div class="section-label">Steam &amp; Operation</div>
+      <div class="grid2">
+        <div class="input-group"><div class="input-label"><label>Steam Cost</label><span class="unit-tag">$/1000 lb</span></div><input type="number" id="steamCost" value="19.10" step="0.25"></div>
+        <div class="input-group"><div class="input-label"><label>Boiler Pressure</label><span class="unit-tag">psig</span></div><input type="number" id="psig" value="72.5" step="1"></div>
+        <div class="input-group"><div class="input-label"><label>Efficiency</label><span class="unit-tag">%</span></div><input type="number" id="eff" value="85" step="1"></div>
+        <div class="input-group"><div class="input-label"><label>Hours / Year</label><span class="unit-tag">hr</span></div><input type="number" id="hrs" value="8736"></div>
+        <div class="input-group"><div class="input-label"><label>Ambient</label><span class="unit-tag">&deg;F</span></div><input type="number" id="amb" value="68"></div>
+        <div class="input-group"><div class="input-label"><label>Environment</label></div>
+          <div class="seg"><button class="active" id="bIn" onclick="setWind(0)">Indoor</button><button id="bOut" onclick="setWind(1)">Outdoor</button></div>
+        </div>
+      </div>
+      <div class="section-label">Energy Source</div>
+      <div class="input-group"><select id="src">
+        <option value="0.059">Natural gas</option>
+        <option value="0.060">LNG</option>
+        <option value="0.069">Propane</option>
+        <option value="0.077">Diesel (avg biofuel blend)</option>
+        <option value="0.105">Coal (industrial)</option>
+      </select></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Add Item</div>
+      <div class="input-group"><div class="input-label"><label>Product Type</label></div><select id="ptype" onchange="onType()"></select></div>
+      <div class="input-group"><div class="input-label"><label>Product Range</label></div><select id="prange" onchange="onRange()"></select></div>
+      <div class="grid2">
+        <div class="input-group"><div class="input-label"><label>Size / Model</label></div><select id="pmodel"></select></div>
+        <div class="input-group"><div class="input-label"><label>Quantity</label></div><input type="number" id="qty" value="1" min="1"></div>
+      </div>
+      <button class="add-btn" onclick="addItem()">+ Add to Calculation</button>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Items</div>
+      <div id="items"><div class="empty">No items yet. Add your first fitting above.</div></div>
+    </div>
+  </div>
+
+  <!-- RIGHT: results -->
+  <div>
+    <div class="results-card">
+      <div class="results-header">
+        <div class="results-title">Annual Savings</div>
+        <div class="results-subtitle">Across all items in the calculation</div>
+      </div>
+      <div class="results-body">
+        <div class="metric-grid">
+          <div class="metric"><div class="metric-label">Financial</div><div class="metric-value fin" id="oFin">$0</div><div class="metric-sub">per year</div></div>
+          <div class="metric"><div class="metric-label">Energy Saved</div><div class="metric-value" id="oEng">0</div><div class="metric-sub">MMBtu / yr</div></div>
+          <div class="metric"><div class="metric-label">CO&#8322;E Reduced</div><div class="metric-value" id="oCo2">0</div><div class="metric-sub">Ton (US) / yr</div></div>
+          <div class="metric"><div class="metric-label">Steam Saved</div><div class="metric-value" id="oStm">0</div><div class="metric-sub">Ton (US) / yr</div></div>
+        </div>
+        <div class="val-box">
+          <div id="valRows"></div>
+          <div class="val-note" id="valNote"></div>
+        </div>
+          <div id="valRows"></div>
+          <div class="val-note" id="valNote"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  Insulation Jacket Savings Calculator &middot; Heat-loss method per Spirax Sarco "The Steam and Condensate Loop"<br>
+  Validated against SI2 Insulation Jackets Benefits Tool V1.6 &middot; Internal use
+</footer>
+</div>
+
+<script>
+const PRODUCT_DATA = {"Isolation Valves":{"BSA Isolation Valve":[["DN15","1/2\" DN15 BSA Isolation Valve",1.1089],["DN20","3/4\" DN20 BSA Isolation Valve",1.0781],["DN25","1\" DN25 BSA Isolation Valve",1.0446],["DN32","1-1/4\" DN32 BSA Isolation Valve",1.0316],["DN40","1-1/2\" DN40 BSA Isolation Valve",1.0965],["DN50","2\" DN50 BSA Isolation Valve",1.1381],["DN65","2-1/2\" DN65 BSA Isolation Valve",1.2698],["DN80","3\" DN80 BSA Isolation Valve",1.3456],["DN100","4\" DN100 BSA Isolation Valve",1.3997],["DN125","5\" DN125 BSA Isolation Valve",1.54],["DN150","6\" DN150 BSA Isolation Valve",1.5826],["DN200","8\" DN200 BSA Isolation Valve",2.0],["DN250","10\" DN250 BSA Isolation Valve",1.8563]],"DBB3 SafeBloc":[["DN15","1/2\" DN15 DBB3 SafeBloc",3.8473],["DN20","3/4\" DN20 DBB3 SafeBloc",3.1795],["DN25","1\" DN25 DBB3 SafeBloc",2.5455],["DN40","1-1/2\" DN40 DBB3 SafeBloc",2.9074],["DN50","2\" DN50 DBB3 SafeBloc",2.5491],["DN65","2-1/2\" DN65 DBB3 SafeBloc",2.4147],["DN80","3\" DN80 DBB3 SafeBloc",2.4905],["DN100","4\" DN100 DBB3 SafeBloc",2.8445]],"A3S Isolation Valve":[["DN15","1/2\" DN15 A3S Isolation Valve",0.8446],["DN20","3/4\" DN20 A3S Isolation Valve",0.7272],["DN25","1\" DN25 A3S Isolation Valve",0.8691],["DN32","1-1/4\" DN32 A3S Isolation Valve",0.8908],["DN40","1-1/2\" DN40 A3S Isolation Valve",1.0887],["DN50","2\" DN50 A3S Isolation Valve",1.1967]],"HV3 Isolation Valve":[["DN15","1/2\" DN15 HV3 Isolation Valve",0.4221],["DN20","3/4\" DN20 HV3 Isolation Valve",0.4235],["DN25","1\" DN25 HV3 Isolation Valve",0.5108],["DN32","1-1/4\" DN32 HV3 Isolation Valve",0.4141],["DN40","1-1/2\" DN40 HV3 Isolation Valve",0.3618],["DN50","2\" DN50 HV3 Isolation Valve",0.7427]],"M10 Ball Valve Screwed":[["DN15","1/2\" DN15 M10Si2 BSP/NPT",0.5433],["DN20","3/4\" DN20 M10Si2 BSP/NPT",0.6046],["DN25","1\" DN25 M10Si2 BSP/NPT",0.5907],["DN32","1-1/4\" DN32 M10Si2 BSP/NPT",0.6142],["DN40","1-1/2\" DN40 M10Si2 BSP/NPT",0.6611],["DN50","2\" DN50 M10Si2 BSP/NPT",0.7327],["DN65","2-1/2\" DN65 M10Si2 BSP/NPT",0.6587]],"M10 Ball Valve Flanged":[["DN15","1/2\" DN15 M10Si2 PN/ANSI",1.1413],["DN20","3/4\" DN20 M10Si2 PN/ANSI",1.1636],["DN25","1\" DN25 M10Si2 PN/ANSI",1.1229],["DN32","1-1/4\" DN32 M10Si2 PN/ANSI",1.0887],["DN40","1-1/2\" DN40 M10Si2 PN/ANSI",1.1389],["DN50","2\" DN50 M10Si2 PN/ANSI",1.0807],["DN65","2-1/2\" DN65 M10Si2 PN/ANSI",1.0663]],"M21 Ball Valve":[["DN15","1/2\" DN15 M21Si2",0.9935],["DN20","3/4\" DN20 M21Si2",0.9576],["DN25","1\" DN25 M21Si2",0.8997],["DN32","1-1/4\" DN32 M21Si2",0.864],["DN40","1-1/2\" DN40 M21Si2",0.9105],["DN50","2\" DN50 M21Si2",0.8899],["DN65","2-1/2\" DN65 M21Si2",0.9418],["DN80","3\" DN80 M21Si2",0.9518],["DN100","4\" DN100 M21Si2",0.9343]]},"Reducing Valves":{"DP27 Screwed":[["DN15","1/2\" DN15 DP27 Reducing Valve Screwed",3.6417],["DN20","3/4\" DN20 DP27 Reducing Valve Screwed",2.9113],["DN25","1\" DN25 DP27 Reducing Valve Screwed",2.6265]],"DP27 Flanged":[["DN15","1/2\" DN15 DP27 Reducing Valve Flanged",3.6925],["DN20","3/4\" DN20 DP27 Reducing Valve Flanged",3.412],["DN25","1\" DN25 DP27 Reducing Valve Flanged",3.002],["DN32","1-1/4\" DN32 DP27 Reducing Valve Flanged",2.6678],["DN40","1-1/2\" DN40 DP27 Reducing Valve Flanged",2.8839],["DN50","2\" DN50 DP27 Reducing Valve Flanged",2.51]],"DP143/163":[["DN15","1/2\" DN15 DP143/163 Reducing Valve Flanged",3.778],["DN20","3/4\" DN20 DP143/163 Reducing Valve Flanged",3.2102],["DN25","1\" DN25 DP143/163 Reducing Valve Flanged",3.3497],["DN32","1-1/4\" DN32 DP143/163 Reducing Valve Flanged",2.8398],["DN40","1-1/2\" DN40 DP143/163 Reducing Valve Flanged",3.1567],["DN50","2\" DN50 DP143/163 Reducing Valve Flanged",3.0496],["DN80","3\" DN80 DP143/163 Reducing Valve Flanged",3.0576]],"DRV Reducing Valve":[["DN15","1/2\" DN15 DRV Reducing Valve",1.664],["DN20","3/4\" DN20 DRV Reducing Valve",1.6771],["DN25","1\" DN25 DRV Reducing Valve",1.6186],["DN32","1-1/4\" DN32 DRV Reducing Valve",1.587],["DN40","1-1/2\" DN40 DRV Reducing Valve",1.6901],["DN50","2\" DN50 DRV Reducing Valve",1.6537],["DN65","2-1/2\" DN65 DRV Reducing Valve",1.7329],["DN80","3\" DN80 DRV Reducing Valve",1.7191],["DN100","4\" DN100 DRV Reducing Valve",1.6391]],"BRV2 Reducing Valve":[["DN15","1/2\" DN15 BRV2 Reducing Valve",1.6004],["DN20","3/4\" DN20 BRV2 Reducing Valve",1.3343],["DN25","1\" DN25 BRV2 Reducing Valve",1.1116]],"BRV7 Reducing Valve":[["DN25","1\" DN25 BRV7 Reducing Valve",1.4417],["DN32","1-1/4\" DN32 BRV7 Reducing Valve",1.2774],["DN40","1-1/2\" DN40 BRV7 Reducing Valve",1.2054],["DN50","2\" DN50 BRV7 Reducing Valve",1.0612]],"NPT 25 Main Valve, CI":[["DN15","1/2\" DN15 NPT 25 Main Valve, CI",1.7139],["DN20","3/4\" DN20 NPT 25 Main Valve, CI",1.4713],["DN25","1\" DN25 NPT 25 Main Valve, CI",1.4086],["DN32","1-1/4\" DN32 NPT 25 Main Valve, CI",1.3382],["DN40","1-1/2\" DN40 NPT 25 Main Valve, CI",1.3296],["DN50","2\" DN50 NPT 25 Main Valve, CI",1.3491],["DN65","2-1/2\" DN65 NPT 25 Main Valve, CI",2.1236],["DN80","3\" DN80 NPT 25 Main Valve, CI",1.9654],["DN100","4\" DN100 NPT 25 Main Valve, CI",1.8566],["DN150","6\" DN150 NPT 25 Main Valve, CI",2.0301]]},"Control Valves":{"KE Control Valve Screwed":[["DN15","1/2\" DN15 KE 4/6/7 BSP/NPT/SW",1.1609],["DN15","1/2\" DN15 KE 4/6/7 PN",1.4465],["DN20","3/4\" DN20 KE 4/6/7 BSP/NPT/SW",1.0401],["DN20","3/4\" DN20 KE 4/6/7 PN",1.3996],["DN25","1\" DN25 KE 4/6/7 BSP/NPT/SW",0.9429],["DN25","1\" DN25 KE 4/6/7 PN",1.2637],["DN32","1-1/4\" DN32 KE 4/6/7 BSP/NPT/SW",0.9051],["DN32","1-1/4\" DN32 KE 4/6/7 PN",1.2106],["DN40","1-1/2\" DN40 KE 4/6/7 BSP/NPT/SW",0.9674],["DN40","1-1/2\" DN40 KE 4/6/7 PN",1.3062],["DN50","2\" DN50 KE 4/6/7 BSP/NPT/SW",0.9502],["DN50","2\" DN50 KE 4/6/7 PN",1.2162],["DN65","2-1/2\" DN65 KE 4/6/7 PN",1.4886],["DN80","3\" DN80 KE 4/6/7 PN",1.4168],["DN100","4\" DN100 KE 4/6/7 PN",1.383],["DN125","5\" DN125 KE 4/6/7 PN",1.5476],["DN150","6\" DN150 KE 4/6/7 PN",1.6771],["DN200","8\" DN200 KE 4/6/7 PN",1.9177]],"KE Control Valve Flanged":[["DN250","10\" DN250 KE 4 PN",1.9708],["DN300","12\" DN300 KE 4 PN",1.9655]]},"Separators":{"S1 Separator":[["DN15","1/2\" DN15 S1 Separator",0.9635],["DN20","3/4\" DN20 S1 Separator",1.1979],["DN25","1\" DN25 S1 Separator",1.8218]],"S2/S12 Separator":[["DN32","1-1/4\" DN32 S12 Separator",1.2628],["DN40","1-1/2\" DN40 S12 Separator",1.1029],["DN50","2\" DN50 S12 Separator",1.4931]],"S3/13 Separator":[["DN40","1-1/2\" DN40 S13 Separator",1.7001],["DN50","2\" DN50 S13 Separator",1.9725],["DN65","2-1/2\" DN65 S13 Separator",1.8893],["DN80","3\" DN80 S13 Separator",2.0169],["DN100","4\" DN100 S13 Separator",2.5037],["DN125","5\" DN125 S13 Separator",3.0955],["DN150","6\" DN150 S13 Separator",2.7347],["DN200","8\" DN200 S13 Separator",2.2874]],"S4A Separator":[["DN25","1\" NPT S4A",1.4144],["DN50","2\" NPT S4A",1.5265],["DN80","3\" FLG S4A",2.4235],["DN100","4\" FLG S4A",2.4354],["DN150","6\" FLG S4A",2.4619]],"S5/S6 Separator (Screwed)":[["DN15","1/2\" DN15 S5/S6 Separator",2.0259],["DN15","1/2\" DN15 S5/S6",1.3739],["DN20","3/4\" DN20 S5/S6 Separator",1.9268],["DN20","3/4\" DN20 S5/S6",1.3724],["DN25","1\" DN25 S5/S6 Separator",2.2475],["DN32","1-1/4\" DN32 S5/S6 Separator",2.2978],["DN40","1-1/2\" DN40 S5/S6 Separator",2.5771],["DN50","2\" DN50 S5/S6 Separator",2.3194],["DN100","4\" DN15 S5 Separator*",1.3901],["DN100","4\" DN20 S5 Separator*",1.2846],["DN100","4\" DN25 S5 Separator*",1.621],["DN100","4\" DN32 S5 Separator*",1.6229],["DN100","4\" DN40 S5 Separator*",1.9151],["DN100","4\" DN50 S5 Separator*",1.6773]],"S5/S6 Separator (Flanged)":[["DN25","1\" NPT S5",1.4801],["DN25","1\" NPT S5 + 1xMating Flange",1.8544],["DN32","1-1/4\" 1.25\" NPT S5",1.4861],["DN32","1-1/4\" 1.25\" NPT S5 + 1xMating Flange",1.8653],["DN40","1-1/2\" 1.5\" NPT S5",1.7547],["DN40","1-1/2\" 1.5\" NPT S5 + 1xMating Flange",2.1688]],"S7/S8 Separator":[["DN65","2-1/2\" DN65 S7 Separator",3.3959],["DN80","3\" DN80 S7 Separator",3.8273],["DN100","4\" DN100 S7 Separator",3.7736],["DN125","5\" DN125 S7 Separator",3.7202],["DN150","6\" DN150 S7 Separator",3.9379],["DN200","8\" DN200 S7 Separator",4.0054],["DN250","10\" DN250 S7 Separator",5.4235]]},"Strainers":{"Fig 12/14HP Strainer":[["DN15","1/2\" DN15 Fig 12/14HP Strainer",0.2585],["DN20","3/4\" DN20 Fig 12/14HP Strainer",0.2802],["DN25","1\" DN25 Fig 12/14HP Strainer",0.3221],["DN32","1-1/4\" DN32 Fig 12/14HP Strainer",0.3734],["DN40","1-1/2\" DN40 Fig 12/14HP Strainer",0.4692],["DN50","2\" DN50 Fig 12/14HP Strainer",0.5057]],"Fig 34/37 Strainer":[["DN15","1/2\" DN15 Fig 34/37 Strainer",0.7768],["DN20","3/4\" DN20 Fig 34/37 Strainer",0.7347],["DN25","1\" DN25 Fig 34/37 Strainer",0.7031],["DN32","1-1/4\" DN32 Fig 34/37 Strainer",0.7038],["DN40","1-1/2\" DN40 Fig 34/37 Strainer",0.7857],["DN50","2\" DN50 Fig 34/37 Strainer",0.8889],["DN65","2-1/2\" DN65 Fig 34/37 Strainer",0.981],["DN80","3\" DN80 Fig 34/37 Strainer",1.0972],["DN100","4\" DN100 Fig 34/37 Strainer",1.2143],["DN125","5\" DN125 Fig 34/37 Strainer",1.4232],["DN150","6\" DN150 Fig 34/37 Strainer",1.8308],["DN200","8\" DN200 Fig 34/37 Strainer",2.0979],["DN250","10\" DN250 Fig 34 Strainer",2.3918],["DN300","12\" DN300 Fig 34 Strainer",2.4891],["DN350","14\" DN350 Fig 34 Strainer",2.7884],["DN400","16\" DN400 Fig 34 Strainer",3.3393]],"Fig 34HP Strainer":[["DN15","1/2\" DN15 Fig 34HP Strainer",1.4907],["DN20","3/4\" DN20 Fig 34HP Strainer",1.5919],["DN25","1\" DN25 Fig 34HP Strainer",1.4101],["DN40","1-1/2\" DN40 Fig 34HP Strainer",1.501],["DN50","2\" DN50 Fig 34HP Strainer",1.4034],["DN65","2-1/2\" DN65 Fig 34HP Strainer",1.6602],["DN80","3\" DN80 Fig 34HP Strainer",1.735],["DN100","4\" DN100 Fig 34HP Strainer",1.802],["DN150","6\" DN150 Fig 34HP Strainer",2.0577],["DN200","8\" DN200 Fig 34HP Strainer",2.3742]],"CSF16 Screwed":[["DN15","1/2\" DN15 CSF16 (Screwed)",0.9266],["DN20","3/4\" DN20 CSF16 (Screwed)",0.9459],["DN25","1\" DN25 CSF16 (Screwed)",0.9155],["DN32","1-1/4\" DN32 CSF16 (Screwed)",0.8952],["DN40","1-1/2\" DN40 CSF16 (Screwed)",0.947],["DN50","2\" DN50 CSF16 (Screwed)",0.9184],["DN50","2\" DN50 CSF16L (Screwed)",0.9184],["DN50","2\" DN50 CSF16H (Screwed)",1.1537],["DN65","2-1/2\" DN65 CSF16 (Screwed)",0.9499],["DN80","3\" DN80 CSF16 (Screwed)",0.9319]],"CSF16 Flanged":[["DN15","1/2\" DN15 CSF16 (Flanged)",1.1933],["DN20","3/4\" DN20 CSF16 (Flanged)",1.3929],["DN25","1\" DN25 CSF16 (Flanged)",1.4959],["DN32","1-1/4\" DN32 CSF16 (Flanged)",1.6412],["DN40","1-1/2\" DN40 CSF16 (Flanged)",1.9264],["DN50","2\" DN50 CSF16 (Flanged)",2.0729],["DN65","2-1/2\" DN65 CSF16 (Flanged)",2.4228],["DN80","3\" DN80 CSF16 (Flanged)",2.6185],["DN100","4\" DN100 CSF16 (Flanged)",2.736],["DN150","6\" DN150 CSF16 (Flanged)",3.1772]]},"Steam Trapping":{"STS17.2 (Single ISO)":[["DN15","1/2\" DN15 STS17.2 (Single Iso)",1.3727],["DN15","1/2\" DN15 STS17.2 (Single Iso - Flanged)",2.1199],["DN20","3/4\" DN20 STS17.2 (Single Iso)",1.1011],["DN20","3/4\" DN20 STS17.2 (Single Iso - Flanged)",1.6972],["DN25","1\" DN25 STS17.2 (Single Iso)",0.9867],["DN25","1\" DN25 STS17.2 (Single Iso - Flanged)",1.4758]],"STS17.2 (Double ISO)":[["DN15","1/2\" DN15 STS17.2 (Double Iso)",1.8959],["DN15","1/2\" DN15 STS17.2 (Double Iso - Flanged)",2.643],["DN20","3/4\" DN20 STS17.2 (Double Iso)",1.5812],["DN20","3/4\" DN20 STS17.2 (Double Iso - Flanged)",2.1772],["DN25","1\" DN25 STS17.2 (Double Iso)",1.3138],["DN25","1\" DN25 STS17.2 (Double Iso - Flanged)",1.8042]],"STS17.2 (Double ISO + Bleed)":[["DN15","1/2\" DN15 STS17.2 (Double Iso + Bleed)",2.1403],["DN15","1/2\" DN15 STS17.2 (Double Iso + Bleed - Flanged)",2.8266],["DN20","3/4\" DN20 STS17.2 (Double Iso + Bleed)",1.7762],["DN20","3/4\" DN20 STS17.2 (Double Iso + Bleed - Flanged)",2.3237],["DN25","1\" DN25 STS17.2 (Double Iso + Bleed)",1.4697],["DN25","1\" DN25 STS17.2 (Double Iso + Bleed - Flanged)",1.9074]],"UFT32":[["UFT32","UFT32",0.9056]],"FTGS14 Screwed":[["DN25","1\" DN25 FTGS14HC BSP/NPT",1.299],["DN32","1-1/4\" DN32 FTGS14HC BSP/NPT",1.0575],["DN40","1-1/2\" DN40 FTGS14 BSP/NPT",1.6884],["DN50","2\" DN50 FTGS14 BSP/NPT",1.7483]],"FT14 Flanged":[["DN15","1/2\" DN15 FT14 BSP/NPT",1.058],["DN15","1/2\" DN15 FT14 PN/ANSI",1.8066],["DN20","3/4\" DN20 FT14 BSP/NPT",0.8643],["DN20","3/4\" DN20 FT14 PN/ANSI",1.5403],["DN25","1\" DN25 FT14 BSP/NPT",0.8549],["DN25","1\" DN25 FT14 PN/ANSI",1.339]],"FT44/47":[["DN15","1/2\" DN15 FT44/47 PN/ANSI",2.5632],["DN20","3/4\" DN20 FT44/47 PN/ANSI",2.4706],["DN25","1\" DN25 FT44/47 PN/ANSI",2.2701],["DN40","1-1/2\" DN40 FT44/47 PN/ANSI",2.6255],["DN50","2\" DN50 FT44/47 PN/ANSI",2.3691],["DN80","3\" DN80 FT44/47 PN/ANSI",3.4366],["DN100","4\" DN100 FT44/47 PN/ANSI",2.8055]],"UFT14HC":[["UFT14HC","UFT14HC",0.2691]],"FT-15/30/75/125":[["DN20","3/4\" DN20 FT-15",0.7743],["DN25","1\" DN25 FT-15",0.6476],["DN32","1-1/4\" DN32 FT-15",0.5375],["DN40","1-1/2\" DN40 FT-15",0.7447],["DN50","2\" DN50 FT-15",0.8159]],"NPT FT450":[["DN20","3/4\" DN20 NPT FT450",0.8511],["DN25","1\" DN25 NPT FT450",0.9953],["DN40","1-1/2\" DN40 NPT FT450",1.326],["DN50","2\" DN50 NPT FT450",1.3045]],"ANSI FT450":[["DN20","3/4\" DN20 ANSI150 FT450",1.103],["DN25","1\" DN25 ANSI150 FT450",1.2367],["DN40","1-1/2\" DN40 ANSI150 FT450",1.9059],["DN50","2\" DN50 ANSI150 FT450",1.8404]],"FTB":[["DN40","1-1/2\" DN40 NPT FTB-200",1.1695],["DN50","2\" DN50 FTB-20",1.2043],["DN50","2\" DN50 FTB-30",2.1927],["DN50","2\" DN50 NPT FTB-175",1.2837],["DN65","2-1/2\" DN65 NPT FTB-125",1.9232]],"FTI":[["DN15","1/2\" DN15 NPT FTI-15",1.1653],["DN25","1\" DN25 NPT FTI-15",0.7684],["DN40","1-1/2\" DN40 NPT FTI-15",1.6293]],"B Series":[["DN15","1/2\" DN15 NPT B1H",0.7921],["DN20","3/4\" DN20 NPT B1H",0.7006],["DN20","3/4\" DN20 NPT B2-15",1.027],["DN25","1\" DN25 NPT B3-15",1.0826],["DN32","1-1/4\" DN32 NPT B4-15",1.3736],["DN50","2\" DN50 NPT B5-15",1.53]]},"Mechanical Pumps / PPUs":{"MFP14 Pump":[["DN25","1\" DN25 MFP14 Pump",6.5377],["DN25","1\" DN25 MFP14 PPU Single",16.7636],["DN40","1-1/2\" DN40 MFP14 Pump",4.8722],["DN40","1-1/2\" DN40 MFP14 PPU Single",13.3518],["DN50","2\" DN50 MFP14 Pump",4.9388],["DN50","2\" DN50 MFP14 PPU Single",13.978],["DN80","3\" DN80 MFP14 Pump",4.1104],["DN80","3\" DN80 MFP14 PPU Single",10.7702]],"APT10 Pump/Trap":[["APT10","APT10 Pump/Trap",3.5553],["APT10","APT10 PPU",7.3266]],"APT14 Pump/Trap":[["APT14","DN40 APT14 Pump/Trap",3.7873],["APT14","APT14 PN/ANSI",4.0939],["APT14HC","DN50 APT14HC Pump/Trap",4.4149],["APT14","APT14 PPU",8.8707],["APT14HC","APT14HC PPU",9.4698]],"Pump Accessories":[["DN25","1\" DN25 NPT PPEC",5.5189],["DN50","2\" DN50 x DN50 NPT / ANSI 150 PTC",2.7662],["DN50","2\" DN50 x DN50 NPT / ANSI 150 PTF",5.7234],["DN80","3\" DN80 x DN50 PTF-HP",6.031],["DN100","4\" DN100 x DN100 PTF4",7.0634]]},"Electrical Pumps / CRUs":{"CRU200/500":[["CRU200","CRU200 DN25 Fixed Speed",6.6418],["CRU200","CRU200 DN40 Fixed Speed",6.6418],["CRU500","CRU500 DN40 Fixed Speed",12.3103],["CRU500","CRU500 DN50 Fixed Speed",12.3103],["CRU200","CRU200 DN25 Variable Speed",6.6418],["CRU200","CRU200 DN40 Variable Speed",6.6418],["CRU500","CRU500 DN40 Variable Speed",12.3103],["CRU500","CRU500 DN50 Variable Speed",12.3103]]},"Manifolds":{"MSC Manifold":[["DN40","1-1/2\" MSC04 Manifold",1.5043],["DN40","1-1/2\" MSC08 Manifold",2.9602],["DN40","1-1/2\" MSC12 Manifold",4.4807]]},"Flash Vessels":{"FV Flash Vessel":[["FV6","FV6 Flash Vessel",2.8219],["FV8","FV8 Flash Vessel",2.5951],["FV12","FV12 Flash Vessel",3.092],["FV15","FV15 Flash Vessel",3.191],["FV18","FV18 Flash Vessel",5.0937],["FV16","FV16 Flash Vessel",3.191]]},"Mating Flanges":{"Mating Flanges":[["DN15","1/2\" DN15 Mating Flanges",0.3521],["DN20","3/4\" DN20 Mating Flanges",0.3746],["DN25","1\" DN25 Mating Flanges",0.3743],["DN32","1-1/4\" DN32 Mating Flanges",0.3792],["DN40","1-1/2\" DN40 Mating Flanges",0.4141],["DN50","2\" DN50 Mating Flanges",0.4146],["DN65","2-1/2\" DN65 Mating Flanges",0.4453],["DN80","3\" DN80 Mating Flanges",0.45],["DN100","4\" DN100 Mating Flanges",0.4375],["DN125","5\" DN125 Mating Flanges",0.4],["DN150","6\" DN150 Mating Flanges",0.4457],["DN200","8\" DN200 Mating Flanges",0.4],["DN250","10\" DN250 Mating Flanges",0.4],["DN300","12\" DN300 Mating Flanges",0.4],["DN350","14\" DN350 Mating Flanges",0.3775],["DN400","16\" DN400 Mating Flanges",0.3776]]},"Pipes":{"Pipes":[["DN15","1/2\" DN15 Pipe",0.9999],["DN20","3/4\" DN20 Pipe",1.0],["DN25","1\" DN25 Pipe",1.0],["DN32","1-1/4\" DN32 Pipe",1.0],["DN40","1-1/2\" DN40 Pipe",1.0],["DN50","2\" DN50 Pipe",1.0],["DN65","2-1/2\" DN65 Pipe",1.0],["DN80","3\" DN80 Pipe",1.0],["DN100","4\" DN100 Pipe",1.0],["DN125","5\" DN125 Pipe",1.0],["DN150","6\" DN150 Pipe",1.0],["DN200","8\" DN200 Pipe",1.0],["DN250","10\" DN250 Pipe",1.0002],["DN300","12\" DN300 Pipe",1.0],["DN350","14\" DN350 Pipe",0.9436],["DN400","16\" DN400 Pipe",0.9439]]}};
+
+// ===== Engine constants (extracted & validated from SI2 V1.6) =====
+const WF={15:[1.81212734e-10,-2.23684652e-7,1.04306795e-4,-2.46542581e-2,4.70997708],20:[1.72440622e-10,-2.12924069e-7,9.93048755e-5,-2.33793486e-2,4.43555862],25:[1.65361755e-10,-2.04240626e-7,9.52659477e-5,-2.23582871e-2,4.22629208],32:[1.57436122e-10,-1.94515495e-7,9.07381061e-5,-2.12196708e-2,4.00132787],40:[1.5030975e-10,-1.85766484e-7,8.66596853e-5,-2.0198053e-2,3.80566862],50:[1.43310962e-10,-1.77168295e-7,8.26460218e-5,-1.91953959e-2,3.61851352],65:[1.35334016e-10,-1.67359499e-7,7.80594135e-5,-1.80521013e-2,3.41033811],80:[1.29261089e-10,-1.59884209e-7,7.45575173e-5,-1.71805356e-2,3.25508665],100:[1.23001494e-10,-1.52170746e-7,7.09373652e-5,-1.62804492e-2,3.09772577],125:[1.17034894e-10,-1.44809002e-7,6.74751163e-5,-1.54202709e-2,2.9500998],150:[1.12382372e-10,-1.39061263e-7,6.47664647e-5,-1.47476515e-2,2.83653876],200:[1.05446709e-10,-1.3047893e-7,6.07118712e-5,-1.37412165e-2,2.66975542],250:[1.00399967e-10,-1.24221712e-7,5.77471453e-5,-1.30055861e-2,2.55032098],300:[9.64832022e-11,-1.19357255e-7,5.54367453e-5,-1.24324994e-2,2.45880158],350:[9.33100294e-11,-1.15410412e-7,5.35583074e-5,-1.19667243e-2,2.38545489],400:[9.06591618e-11,-1.12108814e-7,5.19841613e-5,-1.15765593e-2,2.32476404]};
+const HL={'DN15':[44.8,55.2,67.2,80,108,138.4,172.8,210.4,250.4,294.4,341.6],'DN20':[54.4,68,81.6,97.6,131.2,168,209.6,255.2,304.8,358.4,416],'DN25':[65.6,81.6,99.2,118.4,159.2,204.8,255.2,311.2,371.2,436.8,507.2],'DN32':[80,100,121.6,144,194.4,250.4,312.8,380.8,455.2,536,622.4],'DN40':[90.4,112,136,161.6,217.6,280.8,351.2,428,512,603.2,701.6],'DN50':[108.8,136,164.8,196,264,340.8,426.4,520.8,624,735.2,855.2],'DN65':[134.4,166.4,201.6,239.2,322.4,417.6,522.4,639.2,766.4,904.8,1054.4],'DN80':[152.8,190.4,231.2,274.4,371.2,480,600.8,734.4,880,1037.6,1208],'DN100':[192.8,238.4,288,342.4,461.6,596.8,748.8,916,1099.2,1298.4,1513.6],'DN125':[251.1,316.4,384.7,456.2,609.8,778.8,965.2,1170.5,1396.6,1645.1,1918],'DN150':[265.6,329.6,400,475.2,643.2,833.6,1046.4,1282.4,1540,1820.8,2124],'DN200':[381.4,476.4,576.7,682.6,912.1,1167.2,1450.1,1763.1,2108.4,2488.3,2904.9],'DN250':[460.2,578.9,704,835.9,1121.2,1437.5,1787.7,2174.3,2600.1,3068,3580.6],'DN300':[460.2,578.9,704,835.9,1121.2,1437.5,1787.7,2174.3,2600.1,3068,3580.6],'DN350':[460.2,578.9,704,835.9,1121.2,1437.5,1787.7,2174.3,2600.1,3068,3580.6],'DN400':[460.2,578.9,704,835.9,1121.2,1437.5,1787.7,2174.3,2600.1,3068,3580.6]};
+const DTS=[50,60,70,80,100,120,140,160,180,200,220];
+const JF={'DN15':[.1952,.1778,.1716,.162],'DN20':[.183,.1651,.1584,.1485],'DN25':[.1708,.1524,.1452,.135],'DN32':[.1586,.1397,.132,.135],'DN40':[.1464,.1397,.132,.1215],'DN50':[.1464,.127,.1188,.108],'DN65':[.1342,.127,.1188,.108],'DN80':[.122,.127,.1056,.0945],'DN100':[.122,.1143,.1056,.0945],'DN125':[.122,.1143,.0924,.0945],'DN150':[.122,.1143,.0924,.0945],'DN200':[.122,.1143,.0924,.0945],'DN250':[.122,.1143,.0924,.0945],'DN300':[.122,.1143,.0924,.0945],'DN350':[.122,.1143,.0924,.0945],'DN400':[.122,.1143,.0924,.0945]};
+const BANDS=[[120.4,0],[158.9,1],[201.4,2],[214.9,3]];
+const SAT=[[0,212.0],[2,218.5],[5,227.4],[7,232.3],[10,239.4],[12,243.7],[15,249.8],[18,255.0],[20,258.8],[25,266.8],[30,274.0],[35,280.6],[40,286.7],[45,292.4],[50,297.7],[55,302.6],[60,307.3],[65,311.8],[70,316.0],[72.5,318.04],[75,320.1],[80,323.9],[85,327.8],[90,331.4],[95,334.8],[100,337.9],[110,344.1],[120,350.0],[125,353.0],[135,358.4],[150,365.9],[160,370.6],[175,377.4],[185,381.6],[200,387.9],[225,397.3],[250,406.0],[275,413.9],[285,417.0],[300,421.8],[350,435.1],[385,444.0],[400,448.1],[450,460.1],[485,468.0],[500,470.6],[585,489.8],[600,489.8],[700,503.1],[800,520.3],[900,532.0],[1000,546.4]];
+
+function lerp(x,xs,ys){if(x<=xs[0])return ys[0];if(x>=xs[xs.length-1])return ys[ys.length-1];for(let i=0;i<xs.length-1;i++){if(x>=xs[i]&&x<=xs[i+1]){const f=(x-xs[i])/(xs[i+1]-xs[i]);return ys[i]+f*(ys[i+1]-ys[i]);}}}
+function satF(p){return lerp(p,SAT.map(a=>a[0]),SAT.map(a=>a[1]));}
+function windf(dn,T,outd){if(!outd)return 1;const c=WF[parseInt(dn.replace('DN',''))]||WF[100];return c[0]*Math.pow(T,4)+c[1]*Math.pow(T,3)+c[2]*T*T+c[3]*T+c[4];}
+function hl(dn,dT){return lerp(dT,DTS,HL[dn]||HL['DN100']);}
+function jband(lineC){for(const b of BANDS){if(lineC<=b[0]+0.5)return b[1];}return 3;}
+
+let wind=0, items=[];
+function setWind(w){wind=w;document.getElementById('bIn').classList.toggle('active',w===0);document.getElementById('bOut').classList.toggle('active',w===1);render();}
+function onType(){const t=document.getElementById('ptype').value;document.getElementById('prange').innerHTML=Object.keys(PRODUCT_DATA[t]).map(r=>`<option>${r}</option>`).join('');onRange();}
+function onRange(){const t=document.getElementById('ptype').value,r=document.getElementById('prange').value;document.getElementById('pmodel').innerHTML=PRODUCT_DATA[t][r].map((m,i)=>`<option value="${i}">${m[1]}</option>`).join('');}
+
+function K(){return (parseFloat(document.getElementById('hrs').value)||8736)*3600/1e9*0.947817;}
+function mmbtuPerMlb(){const eff=(parseFloat(document.getElementById('eff').value)||85)/100;return (1187-153)/eff*1000/1e6;}
+
+function calcItem(it){
+  const psig=parseFloat(document.getElementById('psig').value)||72.5;
+  const eff=(parseFloat(document.getElementById('eff').value)||85)/100;
+  const amb=parseFloat(document.getElementById('amb').value)||68;
+  const co2f=parseFloat(document.getElementById('src').value);
+  const costMlb=parseFloat(document.getElementById('steamCost').value)||19.1;
+  const rec=PRODUCT_DATA[it.t][it.r][it.m], eqv=rec[2];
+  const steamF=satF(psig), lineC=(steamF-32)*5/9, dT=lineC-(amb-32)*5/9;
+  const Qbare=hl(it.dn,dT)*eqv*windf(it.dn,lineC,wind)*it.qty;
+  const j=(JF[it.dn]||JF['DN100'])[jband(lineC)];
+  const net=Qbare*(1-j)*K(), gross=net/eff;
+  const mpm=mmbtuPerMlb(), dpm=costMlb/mpm;
+  const netMMBtu=gross*eff; const steamLb=netMMBtu*1e6/((1187-153)/eff); return {gross, fin:gross*dpm, co2:gross*co2f, steam:steamLb/2000, dT, steamF};
+}
+function addItem(){
+  const t=document.getElementById('ptype').value, r=document.getElementById('prange').value, m=parseInt(document.getElementById('pmodel').value);
+  items.push({t,r,m,dn:PRODUCT_DATA[t][r][m][0],qty:parseInt(document.getElementById('qty').value)||1});
+  render();
+}
+function rm(i){items.splice(i,1);render();}
+function money(n){return '$'+(Math.round(n)).toLocaleString();}
+
+function render(){
+  const costMlb=parseFloat(document.getElementById('steamCost').value)||19.1;
+  const eff=(parseFloat(document.getElementById('eff').value)||85)/100;
+  const psig=parseFloat(document.getElementById('psig').value)||72.5;
+  const amb=parseFloat(document.getElementById('amb').value)||68;
+  const srcName=document.getElementById('src').selectedOptions[0].text;
+  const mpm=mmbtuPerMlb(), dpm=costMlb/mpm;
+  document.getElementById('valNote').innerHTML=`$${costMlb.toFixed(2)}/1000 lb &divide; ${mpm.toFixed(4)} MMBtu per 1000 lb = <b>$${dpm.toFixed(3)}/MMBtu</b>. Energy &amp; financial are identical across all fuels; only CO&#8322;E changes by source.`;
+
+  const il=document.getElementById('items');
+  if(!items.length){il.innerHTML='<div class="empty">No items yet. Add your first fitting above.</div>';
+    ['oFin','oEng','oCo2','oStm'].forEach(id=>document.getElementById(id).textContent=id==='oFin'?'$0':'0');return;}
+  let tc=0,te=0,tf=0,ts=0,html='';
+  items.forEach((it,i)=>{const r=calcItem(it);tc+=r.co2;te+=r.gross;tf+=r.fin;ts+=r.steam;
+    html+=`<div class="item"><div><div class="item-name">${PRODUCT_DATA[it.t][it.r][it.m][1]}</div>`+
+      `<div class="item-meta">Qty ${it.qty} &middot; Sat ${Math.round(r.steamF)}&deg;F &middot; &Delta;T ${Math.round(r.dT)}&deg;C</div>`+
+      `<div class="item-save">${money(r.fin)}/yr &middot; ${r.gross.toFixed(2)} MMBtu &middot; ${r.co2.toFixed(2)} Ton CO&#8322;E</div></div>`+
+      `<button class="item-rm" onclick="rm(${i})" aria-label="Remove">&times;</button></div>`;});
+  il.innerHTML=html;
+  document.getElementById('oFin').textContent=money(tf);
+  document.getElementById('oEng').textContent=te.toFixed(1);
+  document.getElementById('oCo2').textContent=tc.toFixed(2);
+  document.getElementById('oStm').textContent=ts.toFixed(2);
+}
+
+document.getElementById('ptype').innerHTML=Object.keys(PRODUCT_DATA).map(t=>`<option>${t}</option>`).join('');
+onType();
+['steamCost','psig','eff','amb','hrs','src'].forEach(id=>document.getElementById(id).addEventListener('input',render));
+render();
+</script>
+</body>
+</html>
