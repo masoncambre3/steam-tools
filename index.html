@@ -1,0 +1,30 @@
+# Startup Condensate Load Calculator
+
+Calculates warm-up condensate load from bringing cold steam piping to saturation temperature. Primary use case is drip leg trap sizing, where startup load (not running load) is the governing condition.
+
+Part of the Steam Field Tools suite.
+
+## Method
+
+Q = W x cp x (Tsat - Tstart) / (hfg x t)
+
+- Q = mean condensate load (lb/h or kg/h)
+- W = total pipe metal weight
+- cp = 0.12 BTU/lb-F (0.49 kJ/kg-C) for carbon steel
+- t = warm-up time in hours
+
+Design load = mean load x safety factor (1x to 3x, selectable). 2x typical for supervised startup, 3x for unsupervised.
+
+## Data
+
+- Pipe weights: ASME B36.10 carbon steel, NPS 1/2" to 24", Sch 40 and Sch 80
+- Steam properties: saturated steam table interpolation, 0 to 600 psig
+- Imperial and SI units with in-place conversion
+
+## Scope
+
+Pipe metal only. Valve bodies, flanges, and fittings are excluded. For headers with heavy valves, add their mass manually or step up the safety factor.
+
+## Deployment
+
+Single self-contained HTML file, no dependencies. Serves as index.html for Vercel.
